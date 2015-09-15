@@ -1,25 +1,38 @@
-@media (max-width: 767px) {
-	.container {
-		width: auto;
+/* МЕДИА */
+@media (max-width: 1200px) {
+	.header {
+		&__text-info {
+			margin: 0 5% 0 0;
+			&:before {
+				right: -2.7em;
+			}
+		}
+	}
+	.universal {
+		&__video-text-block {
+			width: 44%;
+		}
 	}
 }
-@media (min-width: 768px) {
-	.container {
-		width: 750px;
+@media (max-width: 1100px) {
+	.header {
+		&__text-info {
+			margin: 0 3.5% 0 0;
+			&:before {
+				right: -1.7em;
+			}
+		}
+		&__menu-link {
+			padding: 30px 18px;
+		}
 	}
-}
-@media (min-width: 992px) {
-	.container {
-		width: 970px;
-	}
-}
-@media (min-width: 1200px) {
-	.container {
-		width: 1170px;
-	}
-}
-@media (min-width: 1450px) {
-	.container {
-		width: 1370px;
+	.circle {
+		&__item {
+			&._server-rent {left: 9%;}
+			&._virtual-desktop {left: 24.7%;}
+			&._desktop-rent {left: 45.22%;}
+			&._sky {left: 65.7%;}
+			&._all-in {left: 79.3%;}
+		}
 	}
 }

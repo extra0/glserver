@@ -1,4 +1,38 @@
 header.header
-	.container-fluid
-		a.header__logo(href="/")
-			img(src="img/logo.png" alt="Site Logo")
+	.header__block-info
+		.container-fluid
+			p.header__text-info Тел/факс: 8 (495) 648-62-80 
+			p.header__text-info Звонок по России бесплатный: 8 (800) 333-13-69 
+			p.header__text-info E-mail : info@glserver.ru 
+			p.header__text-info г. Москва, ул. Краснобогатырская, д.2 стр.10
+	.header__menu-block
+		.container-fluid
+			a.header__logo(href="/")
+				img(src="img/logo.png" alt="Site Logo")
+			ul.header__menu-list
+				li.header__menu-item
+					a.header__menu-link(href="#") О нас
+				li.header__menu-item.active
+					a.header__menu-link(href="#") Услуги и стоимость
+					ul.dropdown__menu-list
+						li.dropdown__menu-item.active
+							a.dropdown__menu-link.active(href="#") Облако для бизнеса
+						li.dropdown__menu-item
+							a.dropdown__menu-link(href="#") Аренда сервера 1С
+						li.dropdown__menu-item
+							a.dropdown__menu-link(href="#") Виртуальный рабочий стол
+						li.dropdown__menu-item
+							a.dropdown__menu-link(href="#") Аренда рабочего места
+						li.dropdown__menu-item
+							a.dropdown__menu-link(href="#") Готовые решения
+				li.header__menu-item
+					a.header__menu-link(href="#") Клиентам
+					ul.dropdown__menu-list
+						li.dropdown__menu-item
+							a.dropdown__menu-link.active(href="#") Облако для бизнеса
+						li.dropdown__menu-item
+							a.dropdown__menu-link(href="#") Аренда сервера 1С
+				li.header__menu-item
+					a.header__menu-link(href="#") преимущества
+				li.header__menu-item
+					a.header__menu-link(href="#") контакты
