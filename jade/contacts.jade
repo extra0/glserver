@@ -1,0 +1,33 @@
+extends _layout
+block content
+	.main__content
+		.main__block
+			.container-fluid
+				.skys__block
+					img.skys__item._pos-top-high._move-right-slow(src="img/sky/mini_sky_1.png", alt="")
+					img.skys__item._pos-top-middle._move-left-middle(src="img/sky/mini_sky_2.png", alt="")
+					img.skys__item._pos-bottom-high._move-left-slow(src="img/sky/sky_1.png", alt="")
+					img.skys__item._pos-bottom-down._move-right-fast(src="img/sky/sky_2.png", alt="")
+				.contact__block
+					h1.title._color-white Контакты
+					ul.contact__list
+						li.contact__item
+							img.contact__img(src="img/contact_1.png", alt="")
+							p.contact__text Режим работы:
+							span.contact__info 8:00 – 22:00
+							p.contact__text по рабочим дням
+						li.contact__item
+							img.contact__img(src="img/contact_2.png", alt="")
+							p.contact__text Телефон/факс<br>в Москве:
+							span.contact__info 8 (495) 648-62-80 
+						li.contact__item
+							img.contact__img(src="img/contact_3.png", alt="")
+							p.contact__text Звонок по России<br>бесплатный:
+							span.contact__info 8 (800) 333-13-69
+						li.contact__item
+							img.contact__img(src="img/contact_4.png", alt="")
+							p.contact__text E-mail:
+							span.contact__info info@glserver.ru
+					p.contact__address 107564 Россия, г. Москва, ул. Краснобогатырская, д.2 стр.10, время работы офиса с 10.00 до 18.00 
+		.map__block
+			<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=eiFZOaZkQJ7T9PCjln6F1kgzIf1mNGaU"></script>
