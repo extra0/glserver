@@ -1,5 +1,27 @@
 $(function(){
 
+	//прелоадер
+	// window.addEventListener('DOMContentLoaded', function() {
+	//     new QueryLoader2(document.querySelector("body"), {
+	//         barColor: "#efefef",
+	//         backgroundColor: "#00a3e2",
+	//         percentage: true,
+	//         barHeight: 3,
+	//         minimumTime: 200,
+	//         fadeOutTime: 1000
+	//     });
+	// });
+
+	// вызов анимации при скролле
+	var wow = new WOW({
+		boxClass: 'wow', // класс срабатывания при прокрутке
+		animateClass: 'animated', // класс анимации
+		offset: 150, // расстоние до элемента, при запуске анимации
+		mobile: false, // запуск на мобильных устройствах
+		live: true // асинхронный запуск
+	});
+	wow.init();
+
 	// назначение индексов для меню и блока с кружками
 	var link = $('.main__menu-category-link'),
 		circle = $('.circle__item'),

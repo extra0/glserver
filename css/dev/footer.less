@@ -1,10 +1,104 @@
 /* футер */
 .footer {
     background: #094d72;
-    padding: 25px 0;
+    padding: 25px 0 12px 0;
     &:after {
     	content: '';
     	display: block;
     	clear: both;
+    }
+    &__logo {
+    	float: left;
+    	margin: 11px 6.5% 0 0;
+    }
+    &__info-block {
+    	display: inline-block;
+    	vertical-align: top;
+    	box-sizing: border-box;
+    	padding: 12px 5%;
+    	position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			background: url(../img/footer_line.png) 0 0 no-repeat;
+			width: 2px;
+			height: 129px;
+			top: 0;
+			left: 0;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			background: url(../img/footer_line.png) 0 0 no-repeat;
+			width: 2px;
+			height: 129px;
+			top: 0;
+			right: 0;
+		}
+    }
+    &__info-text {
+    	margin: 0;
+    	font-size: 12px;
+    	color: #b1ddf5;
+    	line-height: 20px;
+    }
+    &__app-block {
+    	float: right;
+
+    }
+    &__app-link {
+    	width: 100px;
+    	height: 30px;
+    	margin: 7px 0;
+    	display: block;
+    	background: url(../img/app_sprite.png) 0 0 no-repeat;
+    	&._ios {
+    		background-position: 0px 0px;
+    		&:hover {
+    			background-position: 0px -42px;
+    		}
+    	}
+    	&._android {
+    		background-position: -107px 0px;
+    		&:hover {
+    			background-position: -107px -42px;
+    		}
+    	}
+    }
+    &__link-block {
+    	display: inline-block;
+    	vertical-align: top;
+    	padding: 18px 5% 12px 5%;
+    	position: relative;
+    	&:after {
+    		content: '';
+    		position: absolute;
+    		background: url(../img/footer_line.png) 0 0 no-repeat;
+    		width: 2px;
+    		height: 129px;
+    		top: 0;
+    		right: 0;
+    	}
+    }
+    &__link {
+    	display: block;
+    	color: #b1ddf5;
+    	text-decoration: none;
+    	font-size: 12px;
+    	background: url(../img/footer__sprite.png) 0 0 no-repeat;
+    	line-height: 20px;
+    	padding-left: 30px;
+    	margin-bottom: 10px;
+    	-webkit-transition: color 0.4s ease;
+    	-moz-transition: color 0.4s ease;
+    	-ms-transition: color 0.4s ease;
+    	-o-transition: color 0.4s ease;
+    	transition: color 0.4s ease;
+    	&._useful {background-position: 0px 2px;}
+    	&._sitemap {background-position: 0px -28px;}
+    	&._check {background-position: 0px -59px;}
+    	&:hover {
+    		color: lighten(#b1ddf5, 10%);
+    	}
     }
 }

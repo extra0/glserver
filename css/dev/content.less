@@ -12,6 +12,8 @@
 		text-align: center;
 		margin: 0;
 		font-weight: normal;
+		position: relative;
+		z-index: 2;
 	}
 	&__subtitle {
 		font-size: 30px;
@@ -128,6 +130,8 @@
 		width: 60%;
 		margin-top: 30px;
 		display: inline-block;
+		position: relative;
+		z-index: 2;
 		&._half {
 			width: 52%;
 		}
@@ -167,6 +171,7 @@
 		bottom: -20px;
 		margin: 0!important;
 		position: absolute;
+		z-index: 0;
 		&._pos-right {
 			right: 0px;
 		}
@@ -276,6 +281,8 @@
 	text-transform: uppercase;
 	margin: 0 0 26px 0;
 	text-align: center;
+	position: relative;
+	z-index: 2;
 	&._color-white {
 		color: #fff;
 	}
@@ -287,6 +294,8 @@
 	font-size: 32px;
 	margin: 0 0 24px 0;
 	color: @blue;
+	position: relative;
+	z-index: 2;
 	&._bold {
 		font-weight: bold;
 		color: #000;
@@ -551,5 +560,213 @@
 		margin: 0;
 		text-align: left;
 		line-height: 18px;
+	}
+}
+/* обработка плавающих облаков */
+.skys {
+	&__block {}
+	&__item {
+		position: absolute;
+		z-index: 0;
+		// позиции
+		&._pos-top-high {
+			top: 48px;
+		}
+		&._pos-top-middle {
+			top: 78px;
+		}
+		&._pos-bottom-high {
+			bottom: 37%;
+		}
+		&._pos-bottom-middle {
+			bottom: 30%;
+		}
+		// анимация
+		&._move-right-slow {
+			-webkit-animation: mrs 80s infinite ease alternate-reverse; 
+		    animation: mrs 80s infinite ease alternate-reverse;
+			@-webkit-keyframes mrs {
+				0% {
+					left: 0;
+				}
+				65% {
+					left: 115%;
+				}
+				100% {
+					left: -10%;
+				}
+			}
+			@keyframes mrs {
+				0% {
+					left: 0;
+				}
+				65% {
+					left: 115%;
+				}
+				100% {
+					left: -10%;
+				}
+			}
+		}
+		&._move-right-middle {
+			-webkit-animation: mrm 52s infinite ease; 
+		    animation: mrm 52s infinite ease;
+			@-webkit-keyframes mrm {
+				0% {
+					left: 0;
+				}
+				55% {
+					left: 100%;
+				}
+				90% {
+					left: -10%;
+				}
+				100% {
+					left: 0;
+				}
+			}
+			@keyframes mrm {
+				0% {
+					left: 0;
+				}
+				55% {
+					left: 100%;
+				}
+				90% {
+					left: -10%;
+				}
+				100% {
+					left: 0;
+				}
+			}
+		}
+		&._move-right-fast {
+			-webkit-animation: mrf 40s infinite ease alternate-reverse; 
+		    animation: mrf 40s infinite ease alternate-reverse;
+			@-webkit-keyframes mrf {
+				0% {
+					left: 0;
+				}
+				55% {
+					left: 100%;
+				}
+				90% {
+					left: -10%;
+				}
+				100% {
+					left: 0;
+				}
+			}
+			@keyframes mrf {
+				0% {
+					left: 0;
+				}
+				55% {
+					left: 100%;
+				}
+				90% {
+					left: -10%;
+				}
+				100% {
+					left: 0;
+				}
+			}
+		}
+		&._move-left-slow {
+			-webkit-animation: mls 70s infinite ease alternate-reverse; 
+		    animation: mls 70s infinite ease alternate-reverse;
+			@-webkit-keyframes mls {
+				0% {
+					right: 0;
+				}
+				55% {
+					right: 112%;
+				}
+				90% {
+					right: -10%;
+				}
+				100% {
+					right: 0;
+				}
+			}
+			@keyframes mls {
+				0% {
+					right: 0;
+				}
+				55% {
+					right: 112%;
+				}
+				90% {
+					right: -10%;
+				}
+				100% {
+					right: 0;
+				}
+			}
+		}
+		&._move-left-middle {
+			-webkit-animation: mlm 55s infinite ease alternate-reverse; 
+		    animation: mlm 55s infinite ease alternate-reverse;
+			@-webkit-keyframes mlm {
+				0% {
+					right: -100px;
+				}
+				55% {
+					right: 112%;
+				}
+				100% {
+					right: -100px;
+				}
+			}
+			@keyframes mlm {
+				0% {
+					right: -100px;
+				}
+				55% {
+					right: 112%;
+				}
+				100% {
+					right: -100px;
+				}
+			}
+		}
+		&._move-left-fast {
+			-webkit-animation: mlf 40s infinite ease alternate-reverse; 
+		    animation: mlf 40s infinite ease alternate-reverse;
+			@-webkit-keyframes mlf {
+				0% {
+					right: -200px;
+				}
+				40% {
+					right: 40%;
+				}
+				60% {
+					right: 112%;
+				}
+				80% {
+					right: 60%;
+				}
+				100% {
+					right: -200px;
+				}
+			}
+			@keyframes mlf {
+				0% {
+					right: -200px;
+				}
+				40% {
+					right: 40%;
+				}
+				60% {
+					right: 112%;
+				}
+				80% {
+					right: 60%;
+				}
+				100% {
+					right: -200px;
+				}
+			}
+		}
 	}
 }
