@@ -41,12 +41,13 @@ $(function(){
 		circle.removeClass('active');
 		text.removeClass('active');
 		link.removeClass('active');
-		$(this).addClass('active');
+		
 	}
 
 	// кликаем на ссылку и меняем кружки и ссылку
 	link.click(function(){
 		changer();
+		$(this).addClass('active');
 		var e = $(this).attr('data-index');
 		$('.circle__item[data-index=' +e+']').addClass('active');
 		$('.circle__text[data-index=' +e+']').addClass('active');
@@ -55,6 +56,7 @@ $(function(){
 	// кликаем на кружки и меняем сслыки
 	circle.click(function(){
 		changer();
+		$(this).addClass('active');
 		var e = $(this).attr('data-index');
 		$('.main__menu-category-link[data-index=' +e+']').addClass('active');
 		$('.circle__text[data-index=' +e+']').addClass('active');
