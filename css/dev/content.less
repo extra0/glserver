@@ -660,6 +660,9 @@
 		&._pos-bottom-middle {
 			bottom: 30%;
 		}
+		&._pos-bottom-down {
+			bottom: 6%;
+		}
 		// анимация
 		// &._move-right-slow {
 		// 	-webkit-animation: mrs 80s infinite ease alternate-reverse; 
@@ -847,5 +850,127 @@
 		// 		}
 		// 	}
 		// }
+	}
+}
+/* блок о нас */
+.about {
+	&__block {
+		padding: 19px 37px;
+		position: relative;
+		z-index: 2;
+		> p {
+			color: #fff;
+			margin: -9px 0 28px;
+			line-height: 20px;
+		}
+	}
+	&__img {
+		float: left;
+		margin: 0 50px 25px 0;
+	}
+}
+/* блок сертификатов */
+.certificate {
+	&__block {
+		text-align: center;
+		margin: 48px 0 40px 0;
+	}
+	&__text {
+		line-height: 25px;
+		padding: 0 10%;
+	}
+	&__list {
+		margin: 50px 0 57px 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		width: 28%;
+		margin: 0 1%;
+	}
+	&__item-text {
+		font-size: 13px;
+		margin: 3px 0 0 0;
+	}
+	&__item-img {
+		padding: 5px;
+		border-radius: 7px;
+		border: 2px solid #f0f0f0;
+	}
+}
+/* блок наша команда */
+.team {
+	&__section {
+		text-align: center;
+		background: @blue;
+		padding: 82px 0;
+	}
+	&__text-block {
+		margin: 53px 0 76px 0;
+	}
+	&__text {
+		color: #fff;
+		font-size: 16px;
+		font-weight: 300;
+		margin: 0 0 27px 0;
+	}
+	&__title {
+		position: relative;
+		font-weight: bold;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 18px;
+		margin: 0 0 54px 0;
+		&:before {
+			content: '';
+			position: absolute;
+			background: #fff;
+			height: 1px;
+			width: 100%;
+			top: 12px;
+			left: 0;
+			z-index: 0;
+		}
+		span {
+			display: inline-block;
+			position: relative;
+			z-index: 10;
+			padding: 0 50px;
+			background: @blue;
+		}
+	}
+	&__list {
+		margin: 0 0 62px 0;
+		padding: 0;
+	}
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 1.4%;
+		&._marg {
+			margin: 0 3.2%;
+		}
+	}
+	&__img {
+		border-radius: 50%;
+		border: 2px solid #fff;
+		max-width: 150px;
+		max-height: 150px;
+		&._widthS {
+			max-width: 120px;
+			max-height: 120px;
+		}
+	}
+	&__person-name {
+		font-size: 17px;
+		color: #fff;
+		margin: 0 0 3px;
+	}
+	&__position {
+		font-size: 11px;
+		color: #fff;
+		margin: 0;
 	}
 }

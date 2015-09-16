@@ -4177,6 +4177,125 @@ Copyright (c) 2014 Daniel Eden
 .skys__item._pos-bottom-middle {
   bottom: 30%;
 }
+.skys__item._pos-bottom-down {
+  bottom: 6%;
+}
+/* блок о нас */
+.about__block {
+  padding: 19px 37px;
+  position: relative;
+  z-index: 2;
+}
+.about__block > p {
+  color: #fff;
+  margin: -9px 0 28px;
+  line-height: 20px;
+}
+.about__img {
+  float: left;
+  margin: 0 50px 25px 0;
+}
+/* блок сертификатов */
+.certificate__block {
+  text-align: center;
+  margin: 48px 0 40px 0;
+}
+.certificate__text {
+  line-height: 25px;
+  padding: 0 10%;
+}
+.certificate__list {
+  margin: 50px 0 57px 0;
+  padding: 0;
+  list-style-type: none;
+}
+.certificate__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 28%;
+  margin: 0 1%;
+}
+.certificate__item-text {
+  font-size: 13px;
+  margin: 3px 0 0 0;
+}
+.certificate__item-img {
+  padding: 5px;
+  border-radius: 7px;
+  border: 2px solid #f0f0f0;
+}
+/* блок наша команда */
+.team__section {
+  text-align: center;
+  background: #00a3e2;
+  padding: 82px 0;
+}
+.team__text-block {
+  margin: 53px 0 76px 0;
+}
+.team__text {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0 0 27px 0;
+}
+.team__title {
+  position: relative;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0 0 54px 0;
+}
+.team__title:before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  height: 1px;
+  width: 100%;
+  top: 12px;
+  left: 0;
+  z-index: 0;
+}
+.team__title span {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  padding: 0 50px;
+  background: #00a3e2;
+}
+.team__list {
+  margin: 0 0 62px 0;
+  padding: 0;
+}
+.team__item {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 1.4%;
+}
+.team__item._marg {
+  margin: 0 3.2%;
+}
+.team__img {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  max-width: 150px;
+  max-height: 150px;
+}
+.team__img._widthS {
+  max-width: 120px;
+  max-height: 120px;
+}
+.team__person-name {
+  font-size: 17px;
+  color: #fff;
+  margin: 0 0 3px;
+}
+.team__position {
+  font-size: 11px;
+  color: #fff;
+  margin: 0;
+}
 /* футер */
 .footer {
   background: #094d72;
@@ -4303,7 +4422,7 @@ Copyright (c) 2014 Daniel Eden
 }
 @media (max-width: 1100px) {
   .header__text-info {
-    margin: 0 3.5% 0 0;
+    margin: 0 3.3% 0 0;
   }
   .header__text-info:before {
     right: -1.7em;

@@ -90,4 +90,7 @@ $(function(){
 		maxSlides: 2
 	});
 
+	// вызов фенсибокса
+	$('.fancybox').fancybox();
+
 });
