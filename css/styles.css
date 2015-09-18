@@ -15,6 +15,11 @@
   src: url('../fonts/PFSquareSansPro-Regular.eot');
   src: url('../fonts/PFSquareSansPro-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/PFSquareSansPro-Regular.woff') format('woff'), url('../fonts/PFSquareSansPro-Regular.ttf') format('truetype'), url('../fonts/PFSquareSansPro-Regular.svg') format('svg');
 }
+@font-face {
+  font-family: 'PF Sans PRO Italic';
+  src: url('../fonts/PFSquareSansPro-Italic.eot');
+  src: url('../fonts/PFSquareSansPro-Italic.eot?#iefix') format('embedded-opentype'), url('../fonts/PFSquareSansPro-Italic.woff') format('woff'), url('../fonts/PFSquareSansPro-Italic.ttf') format('truetype'), url('../fonts/PFSquareSansPro-Italic.svg') format('svg');
+}
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   -ms-text-size-adjust: 100%;
@@ -235,6 +240,9 @@ body {
 }
 .clear {
   clear: both;
+}
+.text-center {
+  text-align: center;
 }
 label {
   font-weight: normal;
@@ -3549,10 +3557,14 @@ Copyright (c) 2014 Daniel Eden
   background: #00a3e2;
 }
 .main__block-inner {
-  text-align: center;
   margin: 44px 0 0 0;
   position: relative;
   z-index: 10;
+}
+.main__block-inner:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 .main__subtitle,
 .main__title {
@@ -3929,6 +3941,11 @@ Copyright (c) 2014 Daniel Eden
   font-weight: bold;
   color: #000;
   margin-bottom: 86px;
+}
+.subtitle._font-pro {
+  font-family: 'PF Sans PRO Regular';
+  font-size: 36px;
+  color: #fff;
 }
 /* блок почему мы */
 .argument__section {
@@ -4404,9 +4421,150 @@ Copyright (c) 2014 Daniel Eden
 .article__link:hover {
   text-decoration: underline;
 }
+.article__date-inner {
+  /* одна статья */
+  display: inline-block;
+  color: #fff;
+  background: #0081c8;
+  padding: 3px 8px;
+  font-family: 'PF Sans PRO Medium';
+  font-size: 12px;
+  margin: 0 0 15px;
+}
+.article__sidebar {
+  width: 330px;
+  margin: 4px 0 60px 0;
+  float: left;
+}
+.article__img {
+  border-radius: 5px;
+  margin-bottom: 22px;
+}
+.article__new-article-block {
+  border-radius: 5px;
+  background: #fff;
+  padding-bottom: 23px;
+}
+.article__new-article-title {
+  font-weight: normal;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 5px 5px 0 0;
+  font-family: 'PF Sans PRO Regular';
+  background: #006bb7;
+  padding: 10px 0 13px 0;
+}
+.article__new-article-list {
+  padding: 20px 33px 14px 33px;
+  margin: 0;
+  list-style-type: none;
+}
+.article__new-article-item {
+  margin-bottom: 2px;
+}
+.article__new-article-date {
+  font-size: 12px;
+  color: #565555;
+  font-family: 'PF Sans PRO Italic';
+  margin-right: 5px;
+}
+.article__new-article-link {
+  text-decoration: none;
+  color: #006bb7;
+  font-size: 13px;
+}
+.article__new-article-link:hover {
+  text-decoration: underline;
+}
+.article__new-article-footer-list {
+  text-align: center;
+}
+.article__new-article-link-more {
+  font-size: 18px;
+  color: #006bb7;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid;
+  display: inline-block;
+  line-height: 20px;
+}
+.article__new-article-link-more:hover {
+  border-bottom: 1px solid transparent;
+}
+.article__content {
+  margin: 60px 0 60px 370px;
+  color: #fff;
+  font-family: 'PF Sans PRO Regular';
+}
+.article__content h2,
+.article__content h3,
+.article__content h4,
+.article__content h5 {
+  font-size: 18px;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-family: 'PF Sans PRO Regular';
+}
+.article__changer-block {
+  /* переключатель страниц */
+  text-align: center;
+  padding: 20px 0;
+}
+.article__changer-link {
+  color: #fff;
+  font-size: 18px;
+  font-family: 'PF Sans PRO Regular';
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0 40px;
+  display: inline-block;
+  background: #00a3e2;
+  position: relative;
+  -webkit-transition: background 0.4s ease;
+  -moz-transition: background 0.4s ease;
+  -ms-transition: background 0.4s ease;
+  -o-transition: background 0.4s ease;
+  transition: background 0.4s ease;
+}
+.article__changer-link:hover {
+  background: #00b5fb;
+}
+.article__changer-link._prev {
+  padding: 7px 15px 7px 31px;
+}
+.article__changer-link._prev:before {
+  content: '';
+  position: absolute;
+  background: url(../img/changer_arrow.png) 0 0 no-repeat;
+  width: 10px;
+  height: 17px;
+  top: 8px;
+  left: 12px;
+}
+.article__changer-link._next {
+  padding: 7px 31px 7px 15px;
+}
+.article__changer-link._next:before {
+  content: '';
+  position: absolute;
+  background: url(../img/changer_arrow.png) 0 0 no-repeat;
+  width: 10px;
+  height: 17px;
+  top: 8px;
+  right: 12px;
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
 /* пагинация */
 .pagination__block {
   margin-bottom: 30px;
+  text-align: center;
 }
 .pagination__list {
   margin: 0;
@@ -4444,6 +4602,8 @@ Copyright (c) 2014 Daniel Eden
 .footer {
   background: #094d72;
   padding: 25px 0 12px 0;
+  position: relative;
+  z-index: 2;
 }
 .footer:after {
   content: '';

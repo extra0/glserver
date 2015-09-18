@@ -5,10 +5,14 @@
 		background: @blue;
 	}
 	&__block-inner {
-		text-align: center;
 		margin: 44px 0 0 0;
 		position: relative;
 		z-index: 10;
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
 	}
 	&__subtitle,
 	&__title {
@@ -385,6 +389,11 @@
 		font-weight: bold;
 		color: #000;
 		margin-bottom: 86px;
+	}
+	&._font-pro {
+		font-family: 'PF Sans PRO Regular';
+		font-size: 36px;
+		color: #fff;
 	}
 }
 /* блок почему мы */
@@ -1074,11 +1083,149 @@
 			text-decoration: underline;
 		}
 	}
+	&__date-inner {
+		/* одна статья */
+		display: inline-block;
+		color: #fff;
+		background: #0081c8;
+		padding: 3px 8px;
+		font-family: 'PF Sans PRO Medium';
+		font-size: 12px;
+		margin: 0 0 15px;
+	}
+	&__sidebar {
+		width: 330px;
+		margin: 4px 0 60px 0;
+		float: left;
+	}
+	&__img {
+		border-radius: 5px;
+		margin-bottom: 22px;
+	}
+	&__new-article-block {
+		border-radius: 5px;
+		background: #fff;
+		padding-bottom: 23px;
+	}
+	&__new-article-title {
+		font-weight: normal;
+		color: #fff;
+		margin: 0;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 24px;
+		border-radius: 5px 5px 0 0;
+		font-family: 'PF Sans PRO Regular';
+		background: #006bb7;
+		padding: 10px 0 13px 0;
+	}
+	&__new-article-list {
+		padding: 20px 33px 14px 33px;
+		margin: 0;
+		list-style-type: none;
+	}
+	&__new-article-item {
+		margin-bottom: 2px;
+	}
+	&__new-article-date {
+		font-size: 12px;
+		color: #565555;
+		font-family: 'PF Sans PRO Italic';
+		margin-right: 5px;
+	}
+	&__new-article-link {
+		text-decoration: none;
+		color: #006bb7;
+		font-size: 13px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&__new-article-footer-list {
+		text-align: center;
+	}
+	&__new-article-link-more {
+		font-size: 18px;
+		color: #006bb7;
+		text-transform: uppercase;
+		text-decoration: none;
+		border-bottom: 1px solid;
+		display: inline-block;
+		line-height: 20px;
+		&:hover {
+			border-bottom: 1px solid transparent;
+		}
+	}
+	&__content {
+		margin: 60px 0 60px 370px;
+		color: #fff;
+		font-family: 'PF Sans PRO Regular';
+		h2, h3, h4, h5 {
+			font-size: 18px;
+			font-weight: normal;
+			text-transform: uppercase;
+			font-family: 'PF Sans PRO Regular';
+		}
+	}
+	&__changer-block {
+		/* переключатель страниц */
+		text-align: center;
+		padding: 20px 0;
+	}
+	&__changer-link {
+		color: #fff;
+		font-size: 18px;
+		font-family: 'PF Sans PRO Regular';
+		text-decoration: none;
+		border-radius: 5px;
+		margin: 0 40px;
+		display: inline-block;
+		background: @blue;
+		position: relative;
+		-webkit-transition: background 0.4s ease;
+		-moz-transition: background 0.4s ease;
+		-ms-transition: background 0.4s ease;
+		-o-transition: background 0.4s ease;
+		transition: background 0.4s ease;
+		&:hover {
+			background: lighten(@blue, 5%);
+		}
+		&._prev {
+			padding: 7px 15px 7px 31px;
+			&:before {
+				content: '';
+				position: absolute;
+				background: url(../img/changer_arrow.png) 0 0 no-repeat;
+				width: 10px;
+				height: 17px;
+				top: 8px;
+				left: 12px;
+			}
+		}
+		&._next {
+			padding: 7px 31px 7px 15px;
+			&:before {
+				content: '';
+				position: absolute;
+				background: url(../img/changer_arrow.png) 0 0 no-repeat;
+				width: 10px;
+				height: 17px;
+				top: 8px;
+				right: 12px;
+				-moz-transform: rotate(180deg);
+				-webkit-transform: rotate(180deg);
+				-o-transform: rotate(180deg);
+				-ms-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+		}
+	}
 }
 /* пагинация */
 .pagination {
 	&__block {
 		margin-bottom: 30px;
+		text-align: center;
 	}
 	&__list {
 		margin: 0;
