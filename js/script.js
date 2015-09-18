@@ -25,16 +25,24 @@ $(function(){
 	// назначение индексов для меню и блока с кружками
 	var link = $('.main__menu-category-link'),
 		circle = $('.circle__item'),
-		text = $('.circle__text');
+		text = $('.circle__text'),
+		anchor = $('.universal__text-block .subtitle');
 
 	i = 1;
-	link.each(function(){$(this).attr('data-index', i);i++;});
+	link.each(function(){
+		$(this).attr('data-index', i);
+		$(this).attr('href', '#anchor-' + i);
+		i++;
+	});
 
 	i = 1;
 	circle.each(function(){$(this).attr('data-index', i);i++;});
 
 	i = 1;
 	text.each(function(){$(this).attr('data-index', i);i++;});
+
+	i = 1;
+	anchor.each(function(){$(this).attr('id', 'anchor-' + i);i++;});
 
 	//  функция общей смены картинка текст ссылка на главной
 	function changer() {
@@ -51,16 +59,17 @@ $(function(){
 		var e = $(this).attr('data-index');
 		$('.circle__item[data-index=' +e+']').addClass('active');
 		$('.circle__text[data-index=' +e+']').addClass('active');
+		return false;
 	});
 
 	// кликаем на кружки и меняем сслыки
-	circle.click(function(){
-		changer();
-		$(this).addClass('active');
-		var e = $(this).attr('data-index');
-		$('.main__menu-category-link[data-index=' +e+']').addClass('active');
-		$('.circle__text[data-index=' +e+']').addClass('active');
-	});
+	// circle.click(function(){
+	// 	changer();
+	// 	$(this).addClass('active');
+	// 	var e = $(this).attr('data-index');
+	// 	$('.main__menu-category-link[data-index=' +e+']').addClass('active');
+	// 	$('.circle__text[data-index=' +e+']').addClass('active');
+	// });
 
 	//  слайдер отзывов
 	$('.feedback__slider-list').bxSlider({
@@ -92,5 +101,16 @@ $(function(){
 
 	// вызов фенсибокса
 	$('.fancybox').fancybox();
+
+	//плавный якорь по ссылкам
+	$(document).ready(function() {
+		$('.main__menu-category-link').bind("click", function(e) {
+			var anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $(anchor.attr('href')).offset().top - 70
+			}, 2500);
+			e.preventDefault();
+		});
+	});
 
 });

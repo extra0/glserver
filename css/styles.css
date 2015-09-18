@@ -3813,8 +3813,7 @@ Copyright (c) 2014 Daniel Eden
   left: 16%;
   background-position: 0px 0px;
 }
-.circle__item._server-rent.active,
-.circle__item._server-rent:hover {
+.circle__item._server-rent.active {
   background-position: 0px -124px;
 }
 .circle__item._virtual-desktop {
@@ -3822,8 +3821,7 @@ Copyright (c) 2014 Daniel Eden
   top: -5px;
   left: 27.7%;
 }
-.circle__item._virtual-desktop.active,
-.circle__item._virtual-desktop:hover {
+.circle__item._virtual-desktop.active {
   background-position: -132px -124px;
 }
 .circle__item._desktop-rent {
@@ -3831,8 +3829,7 @@ Copyright (c) 2014 Daniel Eden
   left: 45.22%;
   background-position: -274px 0px;
 }
-.circle__item._desktop-rent.active,
-.circle__item._desktop-rent:hover {
+.circle__item._desktop-rent.active {
   background-position: -273px -124px;
 }
 .circle__item._sky {
@@ -3840,8 +3837,7 @@ Copyright (c) 2014 Daniel Eden
   top: -6px;
   left: 62.7%;
 }
-.circle__item._sky.active,
-.circle__item._sky:hover {
+.circle__item._sky.active {
   background-position: -406px -124px;
 }
 .circle__item._all-in {
@@ -3849,8 +3845,7 @@ Copyright (c) 2014 Daniel Eden
   top: 112px;
   left: 75.3%;
 }
-.circle__item._all-in.active,
-.circle__item._all-in:hover {
+.circle__item._all-in.active {
   background-position: -540px -124px;
 }
 .circle__item._accounting {
@@ -3858,8 +3853,7 @@ Copyright (c) 2014 Daniel Eden
   top: 62px;
   left: 20.3%;
 }
-.circle__item._accounting.active,
-.circle__item._accounting:hover {
+.circle__item._accounting.active {
   background-position: -670px -127px;
 }
 .circle__item._trade {
@@ -3867,8 +3861,7 @@ Copyright (c) 2014 Daniel Eden
   top: -45px;
   left: 45.22%;
 }
-.circle__item._trade.active,
-.circle__item._trade:hover {
+.circle__item._trade.active {
   background-position: -803px -124px;
 }
 .circle__item._startup {
@@ -3876,8 +3869,7 @@ Copyright (c) 2014 Daniel Eden
   top: 62px;
   left: 70.3%;
 }
-.circle__item._startup.active,
-.circle__item._startup:hover {
+.circle__item._startup.active {
   background-position: -934px -124px;
 }
 .circle__block-text {
