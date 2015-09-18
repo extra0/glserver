@@ -49,7 +49,6 @@ $(function(){
 		circle.removeClass('active');
 		text.removeClass('active');
 		link.removeClass('active');
-		
 	}
 
 	// кликаем на ссылку и меняем кружки и ссылку
