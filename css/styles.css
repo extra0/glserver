@@ -3463,14 +3463,14 @@ Copyright (c) 2014 Daniel Eden
 }
 .header__menu-item.active,
 .header__menu-item:hover {
-  background: #f2f2f2;
+  background: #f4f4f4;
 }
 .header__menu-item.active .header__menu-link,
 .header__menu-item:hover .header__menu-link {
   color: #353535;
   border-right: 1px solid #ddd;
   border-left: 1px solid #ddd;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f4f4f4;
   position: relative;
   z-index: 10;
 }
@@ -3504,7 +3504,7 @@ Copyright (c) 2014 Daniel Eden
   opacity: 0;
   z-index: -1;
   width: 100%;
-  background: #f2f2f2;
+  background: #f4f4f4;
   list-style-type: none;
   border-top: 1px solid #ddd;
   margin: 0;
@@ -3521,7 +3521,7 @@ Copyright (c) 2014 Daniel Eden
 .dropdown__menu-list:before {
   content: '';
   position: absolute;
-  background: #f2f2f2;
+  background: #f4f4f4;
   width: 300%;
   left: -100%;
   right: 0;
@@ -3640,6 +3640,19 @@ Copyright (c) 2014 Daniel Eden
   top: -69px;
   left: 0;
 }
+.universal__block._top-bg-dark-blue:before,
+.universal__block._top-bg-blue:before {
+  content: '';
+  position: absolute;
+  background: url(../img/sky/blue_sky.png) center no-repeat;
+  width: 100%;
+  height: 257px;
+  top: -44px;
+  left: 0;
+}
+.universal__block._top-bg-dark-blue:before {
+  background: url(../img/sky/dark_blue_sky.png) center no-repeat;
+}
 .universal__block._top-bg-up:before {
   content: '';
   position: absolute;
@@ -3653,10 +3666,13 @@ Copyright (c) 2014 Daniel Eden
   background: #00a3e2;
 }
 .universal__block._bg-dark-blue {
-  background: #0083cb;
+  background: #0081d0;
+}
+.universal__block._bg-dark-blue-graph {
+  background: #0081d0 url(../img/blue_graph.png) top center no-repeat;
 }
 .universal__block._bg-gray {
-  background: #f2f2f2;
+  background: #f4f4f4;
   border-bottom: 2px solid #e4e4e4;
   border-top: 2px solid #fff;
   position: relative;
@@ -3963,28 +3979,8 @@ Copyright (c) 2014 Daniel Eden
 /* блок слайдер с отзывами на главной*/
 .feedback__section {
   padding: 82px 0 157px;
-  background: #0083cb;
   position: relative;
-}
-.feedback__section:before {
-  content: '';
-  position: absolute;
-  background: url(../img/left_graph.png) 0 0 no-repeat;
-  width: 576px;
-  height: 750px;
-  top: 0;
-  left: -18%;
-  z-index: 0;
-}
-.feedback__section:after {
-  content: '';
-  position: absolute;
-  background: url(../img/right_graph.png) 0 0 no-repeat;
-  width: 784px;
-  height: 750px;
-  top: 0;
-  right: -18%;
-  z-index: 0;
+  background: #0081d0 url(../img/blue_graph.png) top center no-repeat;
 }
 .feedback__section .bx-wrapper {
   margin: 84px auto 0px;
@@ -4048,7 +4044,7 @@ Copyright (c) 2014 Daniel Eden
 /* слайдер с клиенатами на главной */
 .clients__section {
   position: relative;
-  background: #f2f2f2;
+  background: #f4f4f4;
   padding: 89px 0px 0 0;
   margin-bottom: -4px;
 }
@@ -4088,7 +4084,7 @@ Copyright (c) 2014 Daniel Eden
 }
 .clients__slider-wrap .bx-wrapper .bx-pager.bx-default-pager a.active,
 .clients__slider-wrap .bx-wrapper .bx-pager.bx-default-pager a:hover {
-  background: #0083cb;
+  background: #0081d0;
 }
 .clients__slider-wrap .bx-wrapper .bx-pager {
   padding-top: 0;
@@ -4105,29 +4101,10 @@ Copyright (c) 2014 Daniel Eden
 /* слайдер новостей на главной*/
 .news__section {
   position: relative;
+  margin-top: 4px;
   padding: 90px 0 104px 0;
-}
-.news__section:before {
-  content: '';
-  position: absolute;
-  background: url(../img/left_gray_graph.png) 0 0 no-repeat;
-  width: 646px;
-  height: 100%;
-  z-index: 0;
-  top: 4px;
-  left: -18%;
-  background-size: 100% 100%;
-}
-.news__section:after {
-  content: '';
-  position: absolute;
-  background: url(../img/right_gray_graph.png) 0 0 no-repeat;
-  width: 646px;
-  height: 100%;
-  z-index: 0;
-  top: 4px;
-  right: -18%;
-  background-size: 100% 100%;
+  background: url(../img/gray_graph.png) top center no-repeat;
+  background-size: cover;
 }
 .news__slider-wrap {
   margin: 62px 0 0 0;
@@ -4145,7 +4122,7 @@ Copyright (c) 2014 Daniel Eden
 }
 .news__slider-wrap .bx-wrapper .bx-pager.bx-default-pager a.active,
 .news__slider-wrap .bx-wrapper .bx-pager.bx-default-pager a:hover {
-  background: #0083cb;
+  background: #0081d0;
 }
 .news__slider-wrap .bx-wrapper .bx-pager {
   padding-top: 0;
@@ -4621,7 +4598,7 @@ Copyright (c) 2014 Daniel Eden
 }
 .advantages__technology-block {
   /* преимущества технологии */
-  margin: 58px 0 50px;
+  margin: 58px 0 15px;
   text-align: center;
 }
 .advantages__technology-block:nth-child(2) .advantages__technology-title:before {
@@ -4690,6 +4667,129 @@ Copyright (c) 2014 Daniel Eden
   font-size: 12px;
   margin: 0 0 5px;
   line-height: 19px;
+}
+.advantages__compare {
+  text-align: center;
+  margin-bottom: 66px;
+}
+.advantages__text {
+  color: #fff;
+  text-align: center;
+  line-height: 25px;
+  margin: 34px 0 0 0;
+}
+.advantages__text._sizeL {
+  font-size: 18px;
+}
+.advantages__text._uppercase {
+  margin: 0 0 -30px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.advantages__manager-list {
+  /* преимущества директора */
+  list-style-type: none;
+  margin: 71px 0 80px 0;
+  padding: 0;
+}
+.advantages__manager-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  margin: 0 0 64px 4%;
+}
+.advantages__manager-title {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: normal;
+  font-size: 28px;
+  margin: 0;
+  padding: 0 0 6px 51px;
+  position: relative;
+}
+.advantages__manager-title:before {
+  content: '';
+  position: absolute;
+  background: url(../img/advantages_dir_sprite.png) 0 0 no-repeat;
+  width: 55px;
+  height: 65px;
+  top: -19px;
+  left: 0;
+}
+.advantages__manager-title._mobile:before {
+  background-position: 0px 0px;
+}
+.advantages__manager-title._econom {
+  padding: 0 0 0 64px;
+}
+.advantages__manager-title._econom:before {
+  top: -23px;
+  background-position: -76px 0px;
+}
+.advantages__manager-title._safety:before {
+  background-position: 0px -95px;
+}
+.advantages__manager-title._comfort {
+  padding: 0 0 0 64px;
+}
+.advantages__manager-title._comfort:before {
+  top: -23px;
+  background-position: -76px -95px;
+}
+.advantages__manager-text {
+  color: #fff;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+}
+.advantages__manager-text strong {
+  color: #ffe87c;
+}
+.advantages__booker-block {
+  /* преимущества бухгалтера */
+  margin: -15px 0 103px 0;
+}
+.advantages__booker-list {
+  padding: 0;
+  margin: 65px 0 54px 0;
+  list-style-type: none;
+  text-align: center;
+}
+.advantages__booker-item {
+  vertical-align: top;
+  display: inline-block;
+  width: 30%;
+  margin: 0 1.5%;
+}
+.advantages__booker-item-img {
+  display: block;
+  margin: 0 auto 23px auto;
+  background: url(../img/booker_sprite.png) 0px 0 no-repeat;
+  width: 100px;
+  height: 81px;
+}
+.advantages__booker-item-img._econom-time {
+  background-position: 10px 0px;
+}
+.advantages__booker-item-img._safety {
+  background-position: -299px 0px;
+}
+.advantages__booker-item-img._econom-cash {
+  background-position: -628px 0px;
+}
+.advantages__booker-title {
+  font-size: 28px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 23px;
+  line-height: 34px;
+  font-weight: normal;
+}
+.advantages__booker-text {
+  color: #fff;
+  margin: 0;
+  font-size: 12px;
+  padding: 0 25px;
 }
 /* кнопка */
 .btn {
@@ -4802,6 +4902,7 @@ Copyright (c) 2014 Daniel Eden
 .compare__price {
   margin: 0 0 8px;
   font-size: 16px;
+  text-align: center;
   line-height: 14px;
 }
 .compare__link-order {
