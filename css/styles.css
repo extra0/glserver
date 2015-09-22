@@ -5248,6 +5248,9 @@ Copyright (c) 2014 Daniel Eden
   .universal__text-block._half {
     width: 45%;
   }
+  .cost__server-list {
+    min-height: 330px;
+  }
 }
 @media (max-width: 1100px) {
   .header__text-info {
