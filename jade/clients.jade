@@ -1,0 +1,119 @@
+extends _layout
+block content
+	.main__content
+		.main__block
+			.container-fluid
+				.skys__block
+					img.skys__item._pos-top-high._move-right-slow(src="img/sky/sky_1.png", alt="")
+					img.skys__item._pos-top-middle._move-left-middle(src="img/sky/sky_2.png", alt="")
+					img.skys__item._pos-bottom-high._move-left-slow(src="img/sky/mini_sky_1.png", alt="")
+					img.skys__item._pos-bottom-down._move-right-fast(src="img/sky/mini_sky_2.png", alt="")
+				.main__block-inner
+					h1.title._color-white._font-normal АРЕНДА УДАЛЕННОГО СЕРВЕРА
+					.about__block
+						img.about__img.pull-left(src="img/clients.png", alt="")
+						p Аренда удаленного сервера для организаций – это популярная услуга нового времени.  Вы сможете перенести всю рабочую информацию (документы, программы и мн. др) на удаленные защищенные сервера. При этом на удаленный сервер, можно установить и перенести любой софт, с которым Вы привыкли работать. Будь то программы 1С или специальные дополнительные программы, которые разрабатывались под задачи вашей компании.  На работу с сервером не накладываются никакие ограничения; визуально, работа ничем не будет отличаться от работы с локальным компьютером, единственное, вход будет осуществляться по личному логину и паролю.
+						p Если Вам интересен виртуальный сервер, то перейдите по ссылке: <a href="#" class="about__link">ВИРТУАЛЬНЫЙ СЕРВЕР</a>
+						p Аренда сервера в Германии, других странах Европы, а также в Москве и Питере – это гарантия безопасности и бесперебойной работы. 
+		.universal__block._top-bg
+			.container-fluid
+				h3.title._sizeM._color-dark-gray ПРЕИМУЩЕСТВА УДАЛЕННОГО СЕРВЕРА
+				.remote-server__section
+					.remote-server__block._reability.wow.slideInLeft
+						p.remote-server__title надежно
+						ul.remote-server__list
+							li.remote-server__item.wow.flipInX(data-wow-delay="0.6s") Мощное оборудование
+							li.remote-server__item.wow.flipInX(data-wow-delay="0.8s") Лучшие Дата-Центры России и Европы
+							li.remote-server__item.wow.flipInX(data-wow-delay="1s") Круглосуточная техническая поддержка серверов
+					.remote-server__block._safety.wow.slideInRight
+						p.remote-server__title безопасно
+						ul.remote-server__list
+							li.remote-server__item.wow.flipInX(data-wow-delay="0.6s") Вход только под личным логином и паролем
+							li.remote-server__item.wow.flipInX(data-wow-delay="0.8s") Шифрование данных
+							li.remote-server__item.wow.flipInX(data-wow-delay="1s") Ежедневное резервное копирование данных
+							li.remote-server__item.wow.flipInX(data-wow-delay="1.2s") Удаленность серверов от фактического месторасположения компании
+					.remote-server__block._mobile.wow.slideInLeft
+						p.remote-server__title мобильно
+						ul.remote-server__list
+							li.remote-server__item.wow.flipInX(data-wow-delay="0.6s") Работать можно из любой точки земли
+							li.remote-server__item.wow.flipInX(data-wow-delay="0.8s") Попасть на сервер можно с телефона, ноутбука, планшета и т.д.
+							li.remote-server__item.wow.flipInX(data-wow-delay="1s") Данные будут доступны 24/7
+							li.remote-server__item.wow.flipInX(data-wow-delay="1.2s") Возможность объединения удаленных офисов/филиалов/складов
+					.remote-server__block._econom.wow.slideInRight
+						p.remote-server__title экономно
+						ul.remote-server__list
+							li.remote-server__item.wow.flipInX(data-wow-delay="0.6s") Не нужно покупать сервер в офис
+							li.remote-server__item.wow.flipInX(data-wow-delay="0.8s") Аренда программ (MS Office, 1С,CRM)
+							li.remote-server__item.wow.flipInX(data-wow-delay="1s") ИТ- администрирование
+							li.remote-server__item.wow.flipInX(data-wow-delay="1.2s") 1С поддержка
+							li.remote-server__item.wow.flipInX(data-wow-delay="1.4s") Настройка и подключение оборудования нашими программистами
+		.cost__section
+			.container-fluid
+				h3.title._color-white._sizeM СТОИМОСТЬ УДАЛЕННОГО СЕРВЕРА
+				.cost__server-type
+					.cost__server-type-item
+						p.cost__server-type-name БАЗОВЫЙ
+						p.cost__server-type-price от 
+							| <strong>8700</strong><i class="rubl">a</i>
+						img.cost__server-img(src="img/server_base.png", alt="")
+						ul.cost__server-list
+							li.cost__server-list-item Аренда программ 1С (УТ, ЗУП, Бухгалтерия Предприятия)
+							li.cost__server-list-item Офисное ПО (Word, Excel, Outlook)	
+							li.cost__server-list-item Ежедневное резервное копирование данных до 500мб	
+							li.cost__server-list-item Техническая поддержка пользователей
+						.cost__order-wrap
+							a.cost__server-order-btn.fancybox(href="#") заказать
+						a.cost__server-detail-link(href="#") подробнее
+					.cost__server-type-item
+						p.cost__server-type-name БИЗНЕС
+						p.cost__server-type-price от 
+							| <strong>13300</strong><i class="rubl">a</i>
+						img.cost__server-img(src="img/server_business.png", alt="")
+						ul.cost__server-list
+							li.cost__server-list-item Аренда программ 1С (любой конфигурации)
+							li.cost__server-list-item Офисное ПО (Word, Excel ,Outlook, CRM)	
+							li.cost__server-list-item Ежедневное резервное копирование данных до 1Гб	
+							li.cost__server-list-item Техническая поддержка пользователей
+							li.cost__server-list-item Консультации по 1С - 4 часа/месяц
+						.cost__order-wrap
+							a.cost__server-order-btn.fancybox(href="#") заказать
+						a.cost__server-detail-link(href="#") подробнее
+					.cost__server-type-item
+						p.cost__server-type-name КОРПОРАТИВНЫЙ
+						p.cost__server-type-price от 
+							| <strong>21000</strong><i class="rubl">a</i>
+						img.cost__server-img(src="img/server_corporate.png", alt="")
+						ul.cost__server-list
+							li.cost__server-list-item Аренда программ 1С (любой конфигурации)
+							li.cost__server-list-item Офисное ПО (Word, Excel ,Outlook, CRM, дополнительные программы)
+							li.cost__server-list-item Ежедневное резервное копирование данных до 1.5Гб
+							li.cost__server-list-item Техническая поддержка пользователей
+							li.cost__server-list-item Консультации по 1С - безлимитное количество часов
+							li.cost__server-list-item Программы по защите персональных данных
+						.cost__order-wrap
+							a.cost__server-order-btn.fancybox(href="#") заказать
+						a.cost__server-detail-link(href="#") подробнее
+		.clients__section
+			.container-fluid
+				h3.title._color-dark-gray нам доверяют
+				.clients__slider-wrap
+					ul.clients__slider-list
+						li.clients__slider-item
+							img.clients__slider-img(src="img/content/company_list_1.png", alt="")
+						li.clients__slider-item		
+							img.clients__slider-img(src="img/content/company_list_2.png", alt="")
+						li.clients__slider-item		
+							img.clients__slider-img(src="img/content/company_list_3.png", alt="")
+						li.clients__slider-item		
+							img.clients__slider-img(src="img/content/company_list_4.png", alt="")
+						li.clients__slider-item		
+							img.clients__slider-img(src="img/content/company_list_5.png", alt="")
+						li.clients__slider-item		
+							img.clients__slider-img(src="img/content/company_list_6.png", alt="")
+						li.clients__slider-item		
+							img.clients__slider-img(src="img/content/company_list_7.png", alt="")
+						li.clients__slider-item		
+							img.clients__slider-img(src="img/content/company_list_8.png", alt="")
+						li.clients__slider-item		
+							img.clients__slider-img(src="img/content/company_list_9.png", alt="")
+				img.clients__img(src="img/man.png", alt="")
