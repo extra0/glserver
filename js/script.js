@@ -112,4 +112,7 @@ $(function(){
 		});
 	});
 
+	// слайдер процессора 
+	$('.calculate__range-slider').slider();
+
 });
