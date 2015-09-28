@@ -11,44 +11,85 @@ block content
 				.main__block-inner
 					h1.title._color-white._font-normal Облако для бизнеса
 					.calculate__section
-						form.calculate__form(action="#" method="post")
-							.calculate__sidebar
-								input.calculate__checkbox#ddos(type="checkbox")
-								label.calculate__checkbox-label(for="ddos") DDos защита
-								.calculate__total-price-block
-									p.calculate__total-price 1000
-									p.calculate__total-price-currency руб/мес
-									input.calculate__submit(type="submit" value="Заказать")
-							.calculate__range-block-wrapper
-								.calculate__range-block
-									.calculate__range-data
-										input.calculate__range-data-input(type="text" readonly)
-										span.calculate__range-data-attr ГГц
-									p.calculate__range-title CPU
-									.calculate__range-slider#asd
-								.calculate__range-block
-									.calculate__range-data
-										input.calculate__range-data-input(type="text" readonly)
-										span.calculate__range-data-attr Гб
-									p.calculate__range-title RAM
-										span.calculate__range-text (объём гарантированной оперативной памяти, DDR3 ECC) 
-									.calculate__range-slider
-								.calculate__range-block
-									.calculate__range-data
-										input.calculate__range-data-input(type="text" readonly)
-										span.calculate__range-data-attr Гб
-									p.calculate__range-title HDD
-										span.calculate__range-text (объём жёсткого диска, SAS RAID)
-										input.calculate__checkbox#ssd(type="checkbox")
-										label.calculate__checkbox-label(for="ssd") SSD диски
-									.calculate__range-slider
-								.calculate__range-block
-									.calculate__range-data
-										input.calculate__range-data-input(type="text" readonly)
-										span.calculate__range-data-attr шт
-									p.calculate__range-title IP
-										span.calculate__range-text (количество IPv4)
-									.calculate__range-slider
+						// окно заказа
+						.modal__window#modal_order
+							.modal__header
+								img.modal__header-logo(src="img/modal_logo.png", alt="")
+								p.modal__subtitle Облако<br>для бизнеса
+							.modal__body
+								form.modal__form(action="#" method="post")
+									.modal__body-inner
+										label.modal__form-label ФИО:
+										input.modal__form-input(type="text" name="name" required)
+										label.modal__form-label Телефон:
+										input.modal__form-input.mask(type="phone" name="phone" required)
+										label.modal__form-label E-mail:
+										input.modal__form-input(type="email" name="email" required)
+									.modal__body-inner
+										label.modal__form-label._widthL Характеристики<br>сервера:
+										.modal__characteristics-block
+											p.modal__characteristics-title CPU
+											span.modal__characteristics-item#cpu_modal 2x2
+											span.modal__characteristics-value ГГц
+										.modal__characteristics-block
+											p.modal__characteristics-title RAM
+											span.modal__characteristics-item#ram_modal 16
+											span.modal__characteristics-value Гб
+										.modal__characteristics-block
+											p.modal__characteristics-title HDD
+											span.modal__characteristics-item#hdd_modal 200
+											span.modal__characteristics-value Гб
+										.modal__characteristics-block
+											p.modal__characteristics-title IP
+											span.modal__characteristics-item#ip_modal 2
+											span.modal__characteristics-value шт
+									.modal__body-inner
+										label.modal__form-label._widthL Дополнительно:
+										span.modal__characteristics-extra#ssd_modal SSD диски
+										span.modal__characteristics-extra#ddos_modal DDos защита
+									.modal__footer
+										.modal__total-price-block
+											p.modal__total-price 1000
+											span.modal__total-price-currency руб/мес.
+										input.modal__submit(type="submit" value="заказать")
+						// конец окна заказа
+						.calculate__sidebar
+							input.calculate__checkbox#ddos(type="checkbox")
+							label.calculate__checkbox-label(for="ddos") DDos защита
+							.calculate__total-price-block
+								p.calculate__total-price 1000
+								p.calculate__total-price-currency руб/мес
+								a.calculate__submit.fancybox(href="#modal_order") Заказать
+						.calculate__range-block-wrapper
+							.calculate__range-block
+								.calculate__range-data
+									input.calculate__range-data-input#cpu_amount(type="text" readonly)
+									span.calculate__range-data-attr ГГц
+								p.calculate__range-title CPU
+								#calculate__cpu-range
+							.calculate__range-block
+								.calculate__range-data
+									input.calculate__range-data-input#ram_amount(type="text" readonly)
+									span.calculate__range-data-attr Гб
+								p.calculate__range-title RAM
+									span.calculate__range-text (объём гарантированной оперативной памяти, DDR3 ECC) 
+								#calculate__ram-range
+							.calculate__range-block
+								.calculate__range-data
+									input.calculate__range-data-input#hdd_amount(type="text" readonly)
+									span.calculate__range-data-attr Гб
+								p.calculate__range-title HDD
+									span.calculate__range-text (объём жёсткого диска, SAS RAID)
+									input.calculate__checkbox#ssd(type="checkbox")
+									label.calculate__checkbox-label(for="ssd") SSD диски
+								#calculate__hdd-range
+							.calculate__range-block
+								.calculate__range-data
+									input.calculate__range-data-input#ip_amount(type="text" readonly)
+									span.calculate__range-data-attr шт
+								p.calculate__range-title IP
+									span.calculate__range-text (количество IPv4)
+								#calculate__ip-range
 		.universal__block._top-bg
 			.container-fluid
 				.description__block-wrapper

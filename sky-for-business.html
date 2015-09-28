@@ -53,50 +53,90 @@
             <div class="main__block-inner">
               <h1 class="title _color-white _font-normal">Облако для бизнеса</h1>
               <div class="calculate__section">
-                <form action="#" method="post" class="calculate__form">
-                  <div class="calculate__sidebar">
-                    <input id="ddos" type="checkbox" class="calculate__checkbox">
-                    <label for="ddos" class="calculate__checkbox-label">DDos защита</label>
-                    <div class="calculate__total-price-block">
-                      <p class="calculate__total-price">1000</p>
-                      <p class="calculate__total-price-currency">руб/мес</p>
-                      <input type="submit" value="Заказать" class="calculate__submit">
-                    </div>
+                <!-- окно заказа-->
+                <div id="modal_order" class="modal__window">
+                  <div class="modal__header"><img src="img/modal_logo.png" alt="" class="modal__header-logo">
+                    <p class="modal__subtitle">Облако<br>для бизнеса</p>
                   </div>
-                  <div class="calculate__range-block-wrapper">
-                    <div class="calculate__range-block">
-                      <div class="calculate__range-data">
-                        <input type="text" readonly class="calculate__range-data-input"><span class="calculate__range-data-attr">ГГц</span>
+                  <div class="modal__body">
+                    <form action="#" method="post" class="modal__form">
+                      <div class="modal__body-inner">
+                        <label class="modal__form-label">ФИО:</label>
+                        <input type="text" name="name" required class="modal__form-input">
+                        <label class="modal__form-label">Телефон:</label>
+                        <input type="phone" name="phone" required class="modal__form-input mask">
+                        <label class="modal__form-label">E-mail:</label>
+                        <input type="email" name="email" required class="modal__form-input">
                       </div>
-                      <p class="calculate__range-title">CPU</p>
-                      <div id="asd" class="calculate__range-slider"></div>
-                    </div>
-                    <div class="calculate__range-block">
-                      <div class="calculate__range-data">
-                        <input type="text" readonly class="calculate__range-data-input"><span class="calculate__range-data-attr">Гб</span>
+                      <div class="modal__body-inner">
+                        <label class="modal__form-label _widthL">Характеристики<br>сервера:</label>
+                        <div class="modal__characteristics-block">
+                          <p class="modal__characteristics-title">CPU</p><span id="cpu_modal" class="modal__characteristics-item">2x2</span><span class="modal__characteristics-value">ГГц</span>
+                        </div>
+                        <div class="modal__characteristics-block">
+                          <p class="modal__characteristics-title">RAM</p><span id="ram_modal" class="modal__characteristics-item">16</span><span class="modal__characteristics-value">Гб</span>
+                        </div>
+                        <div class="modal__characteristics-block">
+                          <p class="modal__characteristics-title">HDD</p><span id="hdd_modal" class="modal__characteristics-item">200</span><span class="modal__characteristics-value">Гб</span>
+                        </div>
+                        <div class="modal__characteristics-block">
+                          <p class="modal__characteristics-title">IP</p><span id="ip_modal" class="modal__characteristics-item">2</span><span class="modal__characteristics-value">шт</span>
+                        </div>
                       </div>
-                      <p class="calculate__range-title">RAM<span class="calculate__range-text">(объём гарантированной оперативной памяти, DDR3 ECC) </span></p>
-                      <div class="calculate__range-slider"></div>
-                    </div>
-                    <div class="calculate__range-block">
-                      <div class="calculate__range-data">
-                        <input type="text" readonly class="calculate__range-data-input"><span class="calculate__range-data-attr">Гб</span>
+                      <div class="modal__body-inner">
+                        <label class="modal__form-label _widthL">Дополнительно:</label><span id="ssd_modal" class="modal__characteristics-extra">SSD диски</span><span id="ddos_modal" class="modal__characteristics-extra">DDos защита</span>
                       </div>
-                      <p class="calculate__range-title">HDD<span class="calculate__range-text">(объём жёсткого диска, SAS RAID)</span>
-                        <input id="ssd" type="checkbox" class="calculate__checkbox">
-                        <label for="ssd" class="calculate__checkbox-label">SSD диски</label>
-                      </p>
-                      <div class="calculate__range-slider"></div>
-                    </div>
-                    <div class="calculate__range-block">
-                      <div class="calculate__range-data">
-                        <input type="text" readonly class="calculate__range-data-input"><span class="calculate__range-data-attr">шт</span>
+                      <div class="modal__footer">
+                        <div class="modal__total-price-block">
+                          <p class="modal__total-price">1000</p><span class="modal__total-price-currency">руб/мес.</span>
+                        </div>
+                        <input type="submit" value="заказать" class="modal__submit">
                       </div>
-                      <p class="calculate__range-title">IP<span class="calculate__range-text">(количество IPv4)</span></p>
-                      <div class="calculate__range-slider"></div>
-                    </div>
+                    </form>
                   </div>
-                </form>
+                </div>
+                <!-- конец окна заказа-->
+                <div class="calculate__sidebar">
+                  <input id="ddos" type="checkbox" class="calculate__checkbox">
+                  <label for="ddos" class="calculate__checkbox-label">DDos защита</label>
+                  <div class="calculate__total-price-block">
+                    <p class="calculate__total-price">1000</p>
+                    <p class="calculate__total-price-currency">руб/мес</p><a href="#modal_order" class="calculate__submit fancybox">Заказать</a>
+                  </div>
+                </div>
+                <div class="calculate__range-block-wrapper">
+                  <div class="calculate__range-block">
+                    <div class="calculate__range-data">
+                      <input id="cpu_amount" type="text" readonly class="calculate__range-data-input"><span class="calculate__range-data-attr">ГГц</span>
+                    </div>
+                    <p class="calculate__range-title">CPU</p>
+                    <div id="calculate__cpu-range"></div>
+                  </div>
+                  <div class="calculate__range-block">
+                    <div class="calculate__range-data">
+                      <input id="ram_amount" type="text" readonly class="calculate__range-data-input"><span class="calculate__range-data-attr">Гб</span>
+                    </div>
+                    <p class="calculate__range-title">RAM<span class="calculate__range-text">(объём гарантированной оперативной памяти, DDR3 ECC) </span></p>
+                    <div id="calculate__ram-range"></div>
+                  </div>
+                  <div class="calculate__range-block">
+                    <div class="calculate__range-data">
+                      <input id="hdd_amount" type="text" readonly class="calculate__range-data-input"><span class="calculate__range-data-attr">Гб</span>
+                    </div>
+                    <p class="calculate__range-title">HDD<span class="calculate__range-text">(объём жёсткого диска, SAS RAID)</span>
+                      <input id="ssd" type="checkbox" class="calculate__checkbox">
+                      <label for="ssd" class="calculate__checkbox-label">SSD диски</label>
+                    </p>
+                    <div id="calculate__hdd-range"></div>
+                  </div>
+                  <div class="calculate__range-block">
+                    <div class="calculate__range-data">
+                      <input id="ip_amount" type="text" readonly class="calculate__range-data-input"><span class="calculate__range-data-attr">шт</span>
+                    </div>
+                    <p class="calculate__range-title">IP<span class="calculate__range-text">(количество IPv4)</span></p>
+                    <div id="calculate__ip-range"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-$(function(){
+$(function() {
 
 	//прелоадер
 	// window.addEventListener('DOMContentLoaded', function() {
@@ -11,6 +11,9 @@ $(function(){
 	//         fadeOutTime: 1000
 	//     });
 	// });
+
+	// маска на телефон
+	$('.mask').mask('+8 (999) 99-999-99')
 
 	// вызов анимации при скролле
 	var wow = new WOW({
@@ -29,20 +32,29 @@ $(function(){
 		anchor = $('.universal__text-block .subtitle');
 
 	i = 1;
-	link.each(function(){
+	link.each(function() {
 		$(this).attr('data-index', i);
 		$(this).attr('href', '#anchor-' + i);
 		i++;
 	});
 
 	i = 1;
-	circle.each(function(){$(this).attr('data-index', i);i++;});
+	circle.each(function() {
+		$(this).attr('data-index', i);
+		i++;
+	});
 
 	i = 1;
-	text.each(function(){$(this).attr('data-index', i);i++;});
+	text.each(function() {
+		$(this).attr('data-index', i);
+		i++;
+	});
 
 	i = 1;
-	anchor.each(function(){$(this).attr('id', 'anchor-' + i);i++;});
+	anchor.each(function() {
+		$(this).attr('id', 'anchor-' + i);
+		i++;
+	});
 
 	//  функция общей смены картинка текст ссылка на главной
 	function changer() {
@@ -52,12 +64,12 @@ $(function(){
 	}
 
 	// кликаем на ссылку и меняем кружки и ссылку
-	link.click(function(){
+	link.click(function() {
 		changer();
 		$(this).addClass('active');
 		var e = $(this).attr('data-index');
-		$('.circle__item[data-index=' +e+']').addClass('active');
-		$('.circle__text[data-index=' +e+']').addClass('active');
+		$('.circle__item[data-index=' + e + ']').addClass('active');
+		$('.circle__text[data-index=' + e + ']').addClass('active');
 		return false;
 	});
 
@@ -113,6 +125,75 @@ $(function(){
 	});
 
 	// слайдер процессора 
-	$('.calculate__range-slider').slider();
+	$('#calculate__cpu-range').slider({
+		range: "min",
+		value: 2.0,
+		step: 0.2,
+		min: 2.0,
+		max: 5.0,
+		slide: function(event, ui) {
+			$("#cpu_amount").val("2 x "+ ui.value);
+			$('#cpu_modal').html($("#cpu_amount").val());
+		}
+	});
+	$( "#cpu_amount" ).val( "2 x " + $( "#calculate__cpu-range" ).slider( "value" ));
+
+	// слайдер ram
+	$('#calculate__ram-range').slider({
+		range: "min",
+		value: 2,
+		step: 2,
+		min: 2,
+		max: 32,
+		slide: function(event, ui) {
+			$("#ram_amount").val(ui.value);
+			$('#ram_modal').html($("#ram_amount").val());
+		}
+	});
+	$("#ram_amount").val($( "#calculate__ram-range" ).slider( "value" ));
+
+	// слайдер hdd
+	$('#calculate__hdd-range').slider({
+		range: "min",
+		value: 100,
+		step: 100,
+		min: 100,
+		max: 5000,
+		slide: function(event, ui) {
+			$("#hdd_amount").val(ui.value);
+			$('#hdd_modal').html($("#hdd_amount").val());
+		}
+	});
+	$("#hdd_amount").val($( "#calculate__hdd-range" ).slider( "value" ));
+
+	// слайдер ip
+	$('#calculate__ip-range').slider({
+		range: "min",
+		value: 1,
+		step: 1,
+		min: 1,
+		max: 20,
+		slide: function(event, ui) {
+			$("#ip_amount").val(ui.value);
+			$('#ip_modal').html($("#ip_amount").val());
+		}
+	});
+	$("#ip_amount").val($( "#calculate__ip-range" ).slider( "value" ));
+
+	// отмечаем пункты еесли нужно доп услуги
+	$('.calculate__checkbox').click(function(){
+		if ($('#ssd').is(':checked')) {
+			$('#ssd_modal').addClass('active');
+		} else {
+			$('#ssd_modal').removeClass('active');
+		}
+
+		if ($('#ddos').is(':checked')) {
+			$('#ddos_modal').addClass('active');
+		} else {
+			$('#ddos_modal').removeClass('active');
+		}
+	});
+	
 
 });

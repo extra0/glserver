@@ -354,10 +354,10 @@ textarea {
 }
 .fancybox-close {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 36px;
-  height: 36px;
+  top: -2px;
+  right: -2px;
+  width: 38px;
+  height: 38px;
   cursor: pointer;
   z-index: 8040;
 }
@@ -5555,6 +5555,8 @@ Copyright (c) 2014 Daniel Eden
 .calculate__submit {
   color: #fff;
   border: none;
+  text-decoration: none;
+  display: block;
   width: 194px;
   line-height: 66px;
   text-transform: uppercase;
@@ -5666,6 +5668,137 @@ Copyright (c) 2014 Daniel Eden
   color: #fff;
   margin: 0;
   line-height: 23px;
+}
+/* мобадьное окно заказа сервера */
+.modal__window {
+  width: 684px;
+  background: #fff;
+  box-sizing: border-box;
+  border: 10px solid #e8e8e8;
+}
+.modal__header {
+  margin: 22px 18px 15px 18px;
+  padding: 20px 37px 11px 37px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: #00a3e2;
+}
+.modal__header-logo {
+  margin-right: 31px;
+}
+.modal__subtitle {
+  color: #fff;
+  font-size: 30px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 4px 10px 4px 0;
+  vertical-align: top;
+  line-height: 40px;
+}
+.modal__form-label {
+  font-size: 18px;
+  color: #00a3e2;
+  width: 110px;
+  display: inline-block;
+  margin: 0;
+}
+.modal__form-label._widthL {
+  width: 200px;
+}
+.modal__form-input {
+  background: #f5f5f5;
+  border-radius: 5px;
+  border: 1px solid #cecece;
+  box-sizing: border-box;
+  padding: 0 10px;
+  height: 43px;
+  width: 454px;
+  margin-bottom: 17px;
+}
+.modal__body-inner {
+  padding: 19px 0 19px 50px;
+  border-bottom: 2px solid #e8e8e8;
+}
+.modal__characteristics-block {
+  display: inline-block;
+  vertical-align: top;
+  width: 70px;
+  text-align: center;
+  margin: 0px 26px 0 -9px;
+}
+.modal__characteristics-title {
+  color: #6b6b6b;
+  margin: 0 0 4px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.modal__characteristics-item,
+.modal__characteristics-value {
+  color: #d50642;
+  display: inline-block;
+  font-size: 14px;
+}
+.modal__characteristics-value {
+  margin-left: 4px;
+}
+.modal__characteristics-extra {
+  color: #6b6b6b;
+  margin-right: 21px;
+  position: relative;
+}
+.modal__characteristics-extra:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: -11px;
+  height: 15px;
+  width: 1px;
+  background: #6b6b6b;
+}
+.modal__characteristics-extra:last-child:before {
+  display: none;
+}
+.modal__characteristics-extra.active {
+  color: #d50642;
+}
+.modal__footer {
+  padding: 19px 0 19px 50px;
+}
+.modal__total-price-block {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  text-align: center;
+  width: 175px;
+}
+.modal__total-price {
+  margin: -8px 0 -11px;
+  font-size: 49px;
+  color: #d50642;
+  font-weight: bold;
+}
+.modal__total-price-currency {
+  font-size: 15px;
+  color: #d50642;
+  display: inline-block;
+}
+.modal__submit {
+  background: #d50642;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 31px;
+  border-radius: 5px;
+  height: 70px;
+  width: 395px;
+  border: none;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.modal__submit:hover {
+  background: #ee074a;
 }
 /* футер */
 .footer {
