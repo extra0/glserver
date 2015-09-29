@@ -180,7 +180,7 @@ $(function() {
 	});
 	$("#ip_amount").val($( "#calculate__ip-range" ).slider( "value" ));
 
-	// отмечаем пункты еесли нужно доп услуги
+	// отмечаем пункты чекбоксов услуг в калькуляторе и заносим их в модальное
 	$('.calculate__checkbox').click(function(){
 		if ($('#ssd').is(':checked')) {
 			$('#ssd_modal').addClass('active');
