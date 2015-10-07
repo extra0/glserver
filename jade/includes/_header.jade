@@ -1,10 +1,11 @@
 header.header
 	.header__block-info
 		.container-fluid
-			p.header__text-info Тел/факс: 8 (495) 648-62-80 
-			p.header__text-info Звонок по России бесплатный: 8 (800) 333-13-69 
-			p.header__text-info E-mail : info@glserver.ru 
-			p.header__text-info г. Москва, ул. Краснобогатырская, д.2 стр.10
+			.header__text-info-block
+				p.header__text-info Тел/факс: 8 (495) 648-62-80 
+				p.header__text-info Звонок по России бесплатный: 8 (800) 333-13-69 
+				p.header__text-info E-mail : info@glserver.ru 
+				p.header__text-info г. Москва, ул. Краснобогатырская, д.2 стр.10
 	.header__menu-block
 		.container-fluid
 			a.header__logo(href="/")
@@ -12,7 +13,7 @@ header.header
 			ul.header__menu-list
 				li.header__menu-item
 					a.header__menu-link(href="#") О нас
-				li.header__menu-item.active
+				li.header__menu-item
 					a.header__menu-link(href="#") Услуги и стоимость
 					ul.dropdown__menu-list
 						li.dropdown__menu-item.active

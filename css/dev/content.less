@@ -344,11 +344,38 @@
 		transition: all 0.4s ease;
 		&.active {
 			opacity: 1;
+			z-index: 2;
 		}
 		&._sizeL {
 			font-size: 24px;
 			text-transform: uppercase;
 			line-height: 40px;
+		}
+	}
+	&__link {
+		display: block;
+		color: #fff;
+		font-size: 16px;
+		text-transform: uppercase;
+		padding: 3px 15px;
+		border-radius: 12px;
+		border: 2px solid #98daf4;
+		text-decoration: none;
+		margin: 0 5px;
+		position: relative;
+		z-index: 2;
+		width: 110px;
+		font-weight: bold;
+		margin: 20px auto 0 auto;
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+		&:hover {
+			background: #fdc242;
+			border: 2px solid #fdc242;
+			color: #cc000b;
 		}
 	}
 }
@@ -623,7 +650,7 @@
 	&__block {}
 	&__item {
 		position: absolute;
-		z-index: 1;
+		z-index: 0;
 		// позиции
 		&._pos-top-high {
 			top: 48px;

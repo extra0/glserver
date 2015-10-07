@@ -3771,11 +3771,15 @@ Copyright (c) 2014 Daniel Eden
   display: block;
   clear: both;
 }
+.header__text-info-block {
+  display: flex;
+  justify-content: space-between;
+}
 .header__text-info {
   color: #fff;
   font-size: 13px;
   display: inline-block;
-  margin: 0 7.4% 0 0;
+  margin: 0;
   position: relative;
   float: left;
 }
@@ -4239,11 +4243,38 @@ Copyright (c) 2014 Daniel Eden
 }
 .circle__text.active {
   opacity: 1;
+  z-index: 2;
 }
 .circle__text._sizeL {
   font-size: 24px;
   text-transform: uppercase;
   line-height: 40px;
+}
+.circle__link {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 3px 15px;
+  border-radius: 12px;
+  border: 2px solid #98daf4;
+  text-decoration: none;
+  margin: 0 5px;
+  position: relative;
+  z-index: 2;
+  width: 110px;
+  font-weight: bold;
+  margin: 20px auto 0 auto;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.circle__link:hover {
+  background: #fdc242;
+  border: 2px solid #fdc242;
+  color: #cc000b;
 }
 /* TITLE */
 .title {
@@ -4506,7 +4537,7 @@ Copyright (c) 2014 Daniel Eden
 /* обработка плавающих облаков */
 .skys__item {
   position: absolute;
-  z-index: 1;
+  z-index: 0;
 }
 .skys__item._pos-top-high {
   top: 48px;

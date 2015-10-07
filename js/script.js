@@ -1,17 +1,5 @@
 $(function() {
 
-	//прелоадер
-	// window.addEventListener('DOMContentLoaded', function() {
-	//     new QueryLoader2(document.querySelector("body"), {
-	//         barColor: "#efefef",
-	//         backgroundColor: "#00a3e2",
-	//         percentage: true,
-	//         barHeight: 3,
-	//         minimumTime: 200,
-	//         fadeOutTime: 1000
-	//     });
-	// });
-
 	// маска на телефон
 	$('.mask').mask('+8 (999) 99-999-99')
 
@@ -29,38 +17,31 @@ $(function() {
 	var link = $('.main__menu-category-link'),
 		circle = $('.circle__item'),
 		text = $('.circle__text'),
+		linkAnchor = $('.circle__link'),
 		anchor = $('.universal__text-block .subtitle');
 
-	i = 1;
-	link.each(function() {
+	link.each(function(i) {
 		$(this).attr('data-index', i);
 		$(this).attr('href', '#anchor-' + i);
-		i++;
 	});
 
-	i = 1;
-	circle.each(function() {
+	circle.each(function(i) {$(this).attr('data-index', i);});
+
+	linkAnchor.each(function(i) {
 		$(this).attr('data-index', i);
-		i++;
+		$(this).attr('href', '#anchor-' + i);
 	});
 
-	i = 1;
-	text.each(function() {
-		$(this).attr('data-index', i);
-		i++;
-	});
+	text.each(function(i) {$(this).attr('data-index', i);});
 
-	i = 1;
-	anchor.each(function() {
-		$(this).attr('id', 'anchor-' + i);
-		i++;
-	});
+	anchor.each(function(i) {$(this).attr('id', 'anchor-' + i);});
 
 	//  функция общей смены картинка текст ссылка на главной
 	function changer() {
 		circle.removeClass('active');
 		text.removeClass('active');
 		link.removeClass('active');
+		linkAnchor.removeClass('active');
 	}
 
 	// кликаем на ссылку и меняем кружки и ссылку
@@ -72,15 +53,6 @@ $(function() {
 		$('.circle__text[data-index=' + e + ']').addClass('active');
 		return false;
 	});
-
-	// кликаем на кружки и меняем сслыки
-	// circle.click(function(){
-	// 	changer();
-	// 	$(this).addClass('active');
-	// 	var e = $(this).attr('data-index');
-	// 	$('.main__menu-category-link[data-index=' +e+']').addClass('active');
-	// 	$('.circle__text[data-index=' +e+']').addClass('active');
-	// });
 
 	//  слайдер отзывов
 	$('.feedback__slider-list').bxSlider({
@@ -115,7 +87,7 @@ $(function() {
 
 	//плавный якорь по ссылкам
 	$(document).ready(function() {
-		$('.main__menu-category-link').bind("click", function(e) {
+		$('.circle__link').bind("click", function(e) {
 			var anchor = $(this);
 			$('html, body').stop().animate({
 				scrollTop: $(anchor.attr('href')).offset().top - 70
