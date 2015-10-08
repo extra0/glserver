@@ -56,26 +56,26 @@ $(function() {
 
 	//  слайдер отзывов
 	$('.feedback__slider-list').bxSlider({
-		// auto: true,
-		// autoHover: true,
-		// infiniteLoop: true,
-		// autoDelay: 3000
+		auto: true,
+		autoHover: true,
+		infiniteLoop: true,
+		autoDelay: 3000
 	});
 
 	// слайдер клиентов
 	$('.clients__slider-list').bxSlider({
-		// auto: true,
-		// autoHover: true,
-		// infiniteLoop: true,
-		// autoDelay: 4000
+		auto: true,
+		autoHover: true,
+		infiniteLoop: true,
+		autoDelay: 4000
 	});
 
 	// слайдер новостей
 	$('.news__slider-list').bxSlider({
-		// auto: true,
-		// autoHover: true,
-		// infiniteLoop: true,
-		// autoDelay: 2500,
+		auto: true,
+		autoHover: true,
+		infiniteLoop: true,
+		autoDelay: 2500,
 		slideWidth: 475,
 		slideMargin: 25,
 		minSlides: 2,

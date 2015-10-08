@@ -6565,9 +6565,6 @@ Copyright (c) 2014 Daniel Eden
 }
 /* МЕДИА */
 @media (max-width: 1200px) {
-  .header__text-info {
-    margin: 0 5% 0 0;
-  }
   .header__text-info:before {
     right: -2.7em;
   }
@@ -6585,9 +6582,6 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 @media (max-width: 1100px) {
-  .header__text-info {
-    margin: 0 3.3% 0 0;
-  }
   .header__text-info:before {
     right: -1.7em;
   }
