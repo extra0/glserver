@@ -3754,6 +3754,7 @@ Copyright (c) 2014 Daniel Eden
   border-radius: 8px;
 }
 .header {
+  position: fixed;
   z-index: 100;
   margin: 0 auto;
   width: 100%;

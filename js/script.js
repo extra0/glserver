@@ -202,9 +202,11 @@ $(function() {
 	});
 
 	// огранизация подставления данных в модальное окно при клике на "заказать" в блоке детального описания сервера
-	$('.').click(function(){
-
-	});
+	$('.server-description__order').click(function(){
+		console.log($(this).attr('data-index'));
+		$('.modal__server-name').html($(this).parents('.universal__block').find('.server-description__server-name').html()); // записываем название сервера в модальное окно
+		$('.modal__total-price').html($(this).parents('.server-description__table').find('.server-description__table-cost[data-index='+ $(this).attr('data-index') +']').html()); // записываем цену сервера в модальное окно
+ 	});
 	
 
 });
