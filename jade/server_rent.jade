@@ -41,7 +41,7 @@ block content
 							li.cost__server-list-item Техническая поддержка пользователей
 						.cost__order-wrap
 							a.cost__server-order-btn.fancybox(href="#modal_order") заказать
-						a.cost__server-detail-link(href="#") подробнее
+						a.cost__server-detail-link(href="#base") подробнее
 					.cost__server-type-item._gray-bg
 						p.cost__server-type-text._color-blue сервер 1с
 						p.cost__server-type-name БИЗНЕС
@@ -56,7 +56,7 @@ block content
 							li.cost__server-list-item Консультации по 1С - 4 часа/месяц
 						.cost__order-wrap
 							a.cost__server-order-btn.fancybox(href="#modal_order") заказать
-						a.cost__server-detail-link(href="#") подробнее
+						a.cost__server-detail-link(href="#business") подробнее
 					.cost__server-type-item._dark-blue-bg
 						p.cost__server-type-text сервер 1с
 						p.cost__server-type-name КОРПОРАТИВНЫЙ
@@ -72,7 +72,7 @@ block content
 							li.cost__server-list-item Программы по защите персональных данных
 						.cost__order-wrap
 							a.cost__server-order-btn.fancybox(href="#modal_order") заказать
-						a.cost__server-detail-link(href="#") подробнее
+						a.cost__server-detail-link(href="#corporate") подробнее
 		.universal__block._top-bg
 			.container-fluid
 				.text-center
@@ -269,9 +269,143 @@ block content
 							img.rent-adv__img(src="img/advantages_img3.png", alt="")
 							p.rent-adv__title._green-color экономно
 							p.rent-adv__text Все лицензии предоставляются в аренду, входит в стоимость техническая поддержка самого сервера и программ 1С. 
+		.universal__block._bg-blue#base
+			.container-fluid
+				.server-description__info-block
+					.server-description__image-wrap._bg-blue 
+						img.server-description__img(src="img/server_base.png", alt="")
+					.server-description__table-block
+						table.server-description__table
+							thead._bg-dark-blue
+								tr
+									td.server-description__table-users-text(colspan="3") пользователей
+								tr
+									td.server-description__table-users 5
+									td.server-description__table-users 5 - 10
+									td.server-description__table-users >10
+							tbody
+								tr
+									td
+										span.server-description__table-cost 8700
+										span.server-description__text руб/мес
+									td
+										span.server-description__table-cost 10200
+										span.server-description__text руб/мес
+									td
+										span.server-description__table-cost 11700
+										span.server-description__text руб/мес
+							tfoot
+								tr
+									td
+										a.server-description__order.fancybox(href="#modal_order") Заказать
+									td
+										a.server-description__order.fancybox(href="#modal_order") Заказать
+									td
+										a.server-description__order.fancybox(href="#modal_order") Заказать
+				.server-description__text-block
+					p.server-description__server-type Сервер 1С
+					p.server-description__server-name БАЗОВЫЙ
+					.server-description__server-text-area
+						p.server-description__server-text Это отличное решение с минимальными затратами для представителей малого бизнеса. В данный пакет входит все основное программное обеспечение для работы вашей компании ( MS office, 1С), при этом обеспечивается максимальная сохранность и безопасность информации. 
+						p.server-description__server-text Также в этот пакет входит: регулярная техническая поддержка сервера, ежедневное резервное копирование и возможность печати документов на любом принтере. 
+					ul.server-description__text-list._bg-dark-blue
+						li.server-description__text-item Аренда программ 1С (УТ, ЗУП, Бухгалтерия Предприятия)
+						li.server-description__text-item Офисное ПО (Word, Excel, Outlook)	
+						li.server-description__text-item Ежедневное резервное копирование данных до 500мб
+						li.server-description__text-item Техническая поддержка пользователей
+		.universal__block._bg-gray-solid#business
+			.container-fluid
+				.server-description__info-block
+					.server-description__image-wrap._bg-gray
+						img.server-description__img(src="img/server_business.png", alt="")
+					.server-description__table-block
+						table.server-description__table
+							thead._bg-dark-blue
+								tr
+									td.server-description__table-users-text(colspan="3") пользователей
+								tr
+									td.server-description__table-users 5
+									td.server-description__table-users 5 - 10
+									td.server-description__table-users >10
+							tbody._color-blue
+								tr
+									td
+										span.server-description__table-cost 8700
+										span.server-description__text руб/мес
+									td
+										span.server-description__table-cost 10200
+										span.server-description__text руб/мес
+									td
+										span.server-description__table-cost 11700
+										span.server-description__text руб/мес
+							tfoot
+								tr
+									td
+										a.server-description__order.fancybox(href="#modal_order") Заказать
+									td
+										a.server-description__order.fancybox(href="#modal_order") Заказать
+									td
+										a.server-description__order.fancybox(href="#modal_order") Заказать
+				.server-description__text-block
+					p.server-description__server-type._color-dark-blue Сервер 1С
+					p.server-description__server-name._color-dark Бизнес
+					.server-description__server-text-area
+						p.server-description__server-text._color-dark Это наиболее выгодное решение для представителей как среднего, так и малого бизнеса. Данный пакет позволяет получить полный контроль за работой сотрудников, разграничить права доступа к папкам и файлам. При этом вся информация будет храниться на дополнительных сервера (для ее 100% сохранности). Также Вам предоставляется личный системный администратор, который оказывает техническую поддержку любого программного обеспечения, в том числе 1С (но не более 4-х часов в месяц). Пакет БИЗНЕС обеспечивает максимальную сохранность и безопасность информации, благодаря современным криптографическим средствам защиты и шифрованию, а также полностью шифруется канал передачи данных с компьютера на сервер, взломать который невозможно.  
+					ul.server-description__text-list._bg-dark-blue
+						li.server-description__text-item Аренда программ 1С (любой конфигурации)
+						li.server-description__text-item Офисное ПО (Word, Excel ,Outlook, CRM)
+						li.server-description__text-item Ежедневное резервное копирование данных до 1 Гб
+						li.server-description__text-item Техническая поддержка пользователей
+						li.server-description__text-item Консультации по 1С - 4 часа/месяц
+		.universal__block._bg-dark-blue#corporate
+			.container-fluid
+				.server-description__info-block
+					.server-description__image-wrap._bg-blue 
+						img.server-description__img(src="img/server_corporate.png", alt="")
+					.server-description__table-block
+						table.server-description__table
+							thead._bg-blue
+								tr
+									td.server-description__table-users-text(colspan="3") пользователей
+								tr
+									td.server-description__table-users 5
+									td.server-description__table-users 5 - 10
+									td.server-description__table-users >10
+							tbody
+								tr
+									td
+										span.server-description__table-cost 8700
+										span.server-description__text руб/мес
+									td
+										span.server-description__table-cost 10200
+										span.server-description__text руб/мес
+									td
+										span.server-description__table-cost 11700
+										span.server-description__text руб/мес
+							tfoot
+								tr
+									td
+										a.server-description__order.fancybox(href="#modal_order") Заказать
+									td
+										a.server-description__order.fancybox(href="#modal_order") Заказать
+									td
+										a.server-description__order.fancybox(href="#modal_order") Заказать
+				.server-description__text-block
+					p.server-description__server-type Сервер 1С
+					p.server-description__server-name Корпоративный
+					.server-description__server-text-area
+						p.server-description__server-text Это уже более серьезное решение для компаний, которые хотят получить пользу от данной услуги в полном объеме и при этом затрачивая минимальное количество средств. В пакет VIP входит абсолютно любое ПО, которое Вам хотелось установить на сервер. Регулярная техническая поддержка сервера, основного и дополнительного ПО, неограниченная консультация по всем возникающим вопросам в работе с 1С. Производится ежедневное копирование, сохранение копий на дополнительных серверах, криптографическая защита сервера, шифрование информации на сервере и при ее передаче с компьютера на сервер, разграничении прав доступа к информации к файлам и папкам, полный контроль за работой сотрудников, возможность печать документов на любом принтере и т.д.  
+					ul.server-description__text-list._bg-blue
+						li.server-description__text-item Аренда программ 1С (любой конфигурации)
+						li.server-description__text-item Офисное ПО (Word, Excel ,Outlook, CRM, дополнительные программы)
+						li.server-description__text-item Ежедневное резервное копирование данных до 1.5Гб
+						li.server-description__text-item Техническая поддержка пользователей
+						li.server-description__text-item Консультации по 1С - безлимитное количество часов
+						li.server-description__text-item Программы по защите персональных данных
 		.universal__block._bg-blue
 			.container-fluid
-				a.fancybox(href="#compare") таблица сравнения тарифов
+				.compare__center-block
+					a.compare__table-link.fancybox(href="#compare") таблица сравнения тарифов
 		.clients__section
 			.container-fluid
 				h3.title._color-dark-gray нам доверяют

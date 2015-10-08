@@ -85,12 +85,23 @@ $(function() {
 	// вызов фенсибокса
 	$('.fancybox').fancybox();
 
-	//плавный якорь по ссылкам
+	//плавный якорь по ссылкам для главной страницы и готовых решений
 	$(document).ready(function() {
 		$('.circle__link').bind("click", function(e) {
 			var anchor = $(this);
 			$('html, body').stop().animate({
 				scrollTop: $(anchor.attr('href')).offset().top - 70
+			}, 2500);
+			e.preventDefault();
+		});
+	});
+
+	//плавный якорь по ссылкам на странице аренда серверов
+	$(document).ready(function() {
+		$('.circle__link, .cost__server-detail-link').bind("click", function(e) {
+			var anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $(anchor.attr('href')).offset().top
 			}, 2500);
 			e.preventDefault();
 		});
@@ -163,7 +174,7 @@ $(function() {
 	// отмечаем пункты чекбоксов услуг в калькуляторе и заносим их в модальное
 	$('input[name="ssd-val"]').val('Нет');
 	$('input[name="ddos-val"]').val('Нет');
-	
+
 	$('.calculate__checkbox').click(function(){
 		if ($('#ssd').is(':checked')) {
 			$('#ssd_modal').addClass('active');
@@ -182,12 +193,17 @@ $(function() {
 		}
 	});
 
-	// окно заказа готово сервера
+	// подствление занных в окно заказа готово сервера под шапкой
 	$('.cost__server-order-btn').click(function(){
 		$('.modal__server-name').html($(this).parents('.cost__server-type-item').find('.cost__server-type-name').html()); // записываем название сервера в шапку модального
 		$('.modal__total-price').html($(this).parents('.cost__server-type-item').find('.cost__server-current-price').html()); // записываем стоимость сервера в блок цены модального
 		$('input[name="cost"]').val($(this).parents('.cost__server-type-item').find('.cost__server-current-price').html());  // записываем стоимость сервера в input
 		$('input[name="server-name"]').val($(this).parents('.cost__server-type-item').find('.cost__server-type-name').html()); // записываем название сервера в input
+	});
+
+	// огранизация подставления данных в модальное окно при клике на "заказать" в блоке детального описания сервера
+	$('.').click(function(){
+
 	});
 	
 

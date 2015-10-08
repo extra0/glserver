@@ -1,5 +1,8 @@
 /* главный контент */
 .main {
+	&__content {
+		padding-top: 117px;
+	}
 	&__block {
 		padding: 58px 0 83px 0;
 		background: @blue;
@@ -129,6 +132,9 @@
 		}
 		&._bg-dark-blue-graph {
 			background: @dark-blue url(../img/blue_graph.png) top center no-repeat;
+		}
+		&._bg-gray-solid {
+			background: @gray;
 		}
 		&._bg-gray {
 			background: @gray;
@@ -1681,6 +1687,23 @@
 			background: darken(#fff, 10%);
 		}
 	}
+	// блок с ссылкой сравнения
+	&__center-block {
+		text-align: center;
+		margin: 4px 0 43px 0;
+	}
+	&__table-link {
+		display: inline-block;
+		text-decoration: none;
+		font-size: 40px;
+		line-height: 54px;
+		text-transform: uppercase;
+		color: #fff;
+		border-bottom: 2px dashed #fff;
+		&:hover {
+			border-bottom: 2px solid transparent;
+		}
+	}
 }
 /* преимущества удаленного сервера */
 .remote-server {
@@ -2418,10 +2441,9 @@
 }
 // блок приемуществ на странице аренды сервера
 .rent-adv {
-	&__block {}
 	&__list {
 		padding: 0;
-		margin: 46px 0;
+		margin: 46px 0 76px;
 		list-style-type: none;
 		text-align: center;
 	}
@@ -2447,5 +2469,183 @@
 		margin: 0;
 		font-size: 16px;
 		line-height: 25px;
+	}
+}
+// описание серверов
+.server-description {
+	&__info-block {
+		width: 324px;
+		vertical-align: top;
+		display: inline-block;
+		margin: 0 0 0 15px;
+		float: left;
+	}
+	&__image-wrap {
+		border-radius: 50%;
+		// padding: 10px;
+		width: 275px;
+		height: 275px;
+		display: -webkit-box; 
+		display: -moz-box;   
+		display: -ms-flexbox; 
+		display: -webkit-flex;
+		display: flex;
+		margin: 0 auto 30px auto;
+		&._bg-blue {
+			background: #46bcea;
+		}
+		&._bg-gray {
+			background: #e7e7e7;
+		}
+	}
+	&__img {
+		display: block;
+		margin: auto!important;
+	}
+	// таблица тарифов
+	&__table {
+		text-align: center;
+		color: #fff;
+		thead {
+			&._bg-dark-blue {
+				background: @dark-blue;
+			}
+			&._bg-blue {
+				background: @blue;
+			}
+
+		}
+		tbody {
+			td {
+				padding: 9px 0;
+			}
+			&._color-blue {
+				color: @blue;
+			}
+		}
+		tfoot {
+			background: #fdc300;
+			td {
+				padding: 0;
+				-webkit-transition: all 0.4s ease;
+				-moz-transition: all 0.4s ease;
+				-ms-transition: all 0.4s ease;
+				-o-transition: all 0.4s ease;
+				transition: all 0.4s ease;
+				&:hover {
+					background: lighten(#fdc300, 5%);
+				}
+			}
+		}
+		td {
+			width: 20%;
+			padding: 4px 0 3px 0;
+			border: 1px solid #73ccee;
+			&.server-description__table-users-text {
+				font-size: 16px;
+				text-transform: uppercase;
+			}
+			&.server-description__table-users {
+				font-size: 26px;
+				padding: 2px 0 1px 0;
+			}
+		}
+	}
+	&__table-cost {
+		font-size: 26px;
+		display: block;
+		margin: 0 0 -4px 0;
+	}
+	&__text {
+		font-size: 12px;
+	}
+	&__order {
+		color: #000;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 16px;
+		display: block;
+		z-index: 2;
+		padding: 16px 0 13px 0;
+		position: relative;
+		-webkit-transition: color 0.4s ease;
+		-moz-transition: color 0.4s ease;
+		-ms-transition: color 0.4s ease;
+		-o-transition: color 0.4s ease;
+		transition: color 0.4s ease;
+		&:after {
+			content: '';
+			height: 0px;
+			position: absolute;
+			width: 100%;
+			background: @dark-blue;
+			bottom: 0;
+			z-index: -1;
+			left: 0;
+			-webkit-transition: height 0.4s ease;
+			-moz-transition: height 0.4s ease;
+			-ms-transition: height 0.4s ease;
+			-o-transition: height 0.4s ease;
+			transition: height 0.4s ease;
+		}
+		&:hover {
+			color: #fff;
+			&:after {
+				height: 100%;
+			}
+		}
+	}
+	// текстовая информация о сервере
+	&__text-block {
+		vertical-align: top;
+		margin-left: 376px;
+		color: #fff;
+		margin-top: 18px;
+		margin-bottom: 41px;
+	}
+	&__server-type {
+		color: #fdc300;
+		font-weight: bold;
+		margin: 0 0 -5px;
+		font-size: 16px;
+		text-transform: uppercase;
+		&._color-dark-blue {
+			color: @dark-blue;
+		}
+	}
+	&__server-name {
+		font-size: 36px;
+		font-weight: 300;
+		text-transform: uppercase;
+		margin: 0 0 5px;
+		&._color-dark {
+			color: #393939;
+		}
+	}
+	&__server-text-area {
+		min-height: 211px;
+	}
+	&__server-text {
+		line-height: 24px;
+		margin: 0 0 24px;
+		&._color-dark {
+			color: #393939;
+		}
+	}
+	&__text-list {
+		padding: 27px 76px;
+		max-width: 585px;
+		margin: 0;
+		list-style-image: url(../img/list-type-white.png);
+		&._bg-dark-blue {
+			background: @dark-blue;
+		}
+		&._bg-blue {
+			background: @blue;
+		}
+	}
+	&__text-item {
+		padding-left: 13px;
+		margin-bottom: 7px;
 	}
 }

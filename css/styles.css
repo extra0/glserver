@@ -3753,6 +3753,11 @@ Copyright (c) 2014 Daniel Eden
   /* support: IE8 */
   border-radius: 8px;
 }
+.header {
+  z-index: 100;
+  margin: 0 auto;
+  width: 100%;
+}
 .header__logo {
   display: inline-block;
   margin-top: 19px;
@@ -3761,6 +3766,7 @@ Copyright (c) 2014 Daniel Eden
 .header__menu-block {
   box-shadow: 2px 13px 20px -15px #000000;
   position: relative;
+  background: #fff;
 }
 .header__block-info {
   padding: 8px 0;
@@ -3908,6 +3914,9 @@ Copyright (c) 2014 Daniel Eden
   background: #e4e4e4;
 }
 /* главный контент */
+.main__content {
+  padding-top: 117px;
+}
 .main__block {
   padding: 58px 0 83px 0;
   background: #00a3e2;
@@ -4026,6 +4035,9 @@ Copyright (c) 2014 Daniel Eden
 }
 .universal__block._bg-dark-blue-graph {
   background: #0081d0 url(../img/blue_graph.png) top center no-repeat;
+}
+.universal__block._bg-gray-solid {
+  background: #f4f4f4;
 }
 .universal__block._bg-gray {
   background: #f4f4f4;
@@ -5529,6 +5541,22 @@ Copyright (c) 2014 Daniel Eden
 .compare__link-order:hover {
   background: #e6e6e6;
 }
+.compare__center-block {
+  text-align: center;
+  margin: 4px 0 43px 0;
+}
+.compare__table-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 40px;
+  line-height: 54px;
+  text-transform: uppercase;
+  color: #fff;
+  border-bottom: 2px dashed #fff;
+}
+.compare__table-link:hover {
+  border-bottom: 2px solid transparent;
+}
 /* преимущества удаленного сервера */
 .remote-server__section {
   display: -webkit-box;
@@ -6223,7 +6251,7 @@ Copyright (c) 2014 Daniel Eden
 }
 .rent-adv__list {
   padding: 0;
-  margin: 46px 0;
+  margin: 46px 0 76px;
   list-style-type: none;
   text-align: center;
 }
@@ -6255,6 +6283,173 @@ Copyright (c) 2014 Daniel Eden
   margin: 0;
   font-size: 16px;
   line-height: 25px;
+}
+.server-description__info-block {
+  width: 324px;
+  vertical-align: top;
+  display: inline-block;
+  margin: 0 0 0 15px;
+  float: left;
+}
+.server-description__image-wrap {
+  border-radius: 50%;
+  width: 275px;
+  height: 275px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0 auto 30px auto;
+}
+.server-description__image-wrap._bg-blue {
+  background: #46bcea;
+}
+.server-description__image-wrap._bg-gray {
+  background: #e7e7e7;
+}
+.server-description__img {
+  display: block;
+  margin: auto!important;
+}
+.server-description__table {
+  text-align: center;
+  color: #fff;
+}
+.server-description__table thead._bg-dark-blue {
+  background: #0081d0;
+}
+.server-description__table thead._bg-blue {
+  background: #00a3e2;
+}
+.server-description__table tbody td {
+  padding: 9px 0;
+}
+.server-description__table tbody._color-blue {
+  color: #00a3e2;
+}
+.server-description__table tfoot {
+  background: #fdc300;
+}
+.server-description__table tfoot td {
+  padding: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.server-description__table tfoot td:hover {
+  background: #ffca18;
+}
+.server-description__table td {
+  width: 20%;
+  padding: 4px 0 3px 0;
+  border: 1px solid #73ccee;
+}
+.server-description__table td.server-description__table-users-text {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.server-description__table td.server-description__table-users {
+  font-size: 26px;
+  padding: 2px 0 1px 0;
+}
+.server-description__table-cost {
+  font-size: 26px;
+  display: block;
+  margin: 0 0 -4px 0;
+}
+.server-description__text {
+  font-size: 12px;
+}
+.server-description__order {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  display: block;
+  z-index: 2;
+  padding: 16px 0 13px 0;
+  position: relative;
+  -webkit-transition: color 0.4s ease;
+  -moz-transition: color 0.4s ease;
+  -ms-transition: color 0.4s ease;
+  -o-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+.server-description__order:after {
+  content: '';
+  height: 0px;
+  position: absolute;
+  width: 100%;
+  background: #0081d0;
+  bottom: 0;
+  z-index: -1;
+  left: 0;
+  -webkit-transition: height 0.4s ease;
+  -moz-transition: height 0.4s ease;
+  -ms-transition: height 0.4s ease;
+  -o-transition: height 0.4s ease;
+  transition: height 0.4s ease;
+}
+.server-description__order:hover {
+  color: #fff;
+}
+.server-description__order:hover:after {
+  height: 100%;
+}
+.server-description__text-block {
+  vertical-align: top;
+  margin-left: 376px;
+  color: #fff;
+  margin-top: 18px;
+  margin-bottom: 41px;
+}
+.server-description__server-type {
+  color: #fdc300;
+  font-weight: bold;
+  margin: 0 0 -5px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.server-description__server-type._color-dark-blue {
+  color: #0081d0;
+}
+.server-description__server-name {
+  font-size: 36px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0 0 5px;
+}
+.server-description__server-name._color-dark {
+  color: #393939;
+}
+.server-description__server-text-area {
+  min-height: 211px;
+}
+.server-description__server-text {
+  line-height: 24px;
+  margin: 0 0 24px;
+}
+.server-description__server-text._color-dark {
+  color: #393939;
+}
+.server-description__text-list {
+  padding: 27px 76px;
+  max-width: 585px;
+  margin: 0;
+  list-style-image: url(../img/list-type-white.png);
+}
+.server-description__text-list._bg-dark-blue {
+  background: #0081d0;
+}
+.server-description__text-list._bg-blue {
+  background: #00a3e2;
+}
+.server-description__text-item {
+  padding-left: 13px;
+  margin-bottom: 7px;
 }
 /* футер */
 .footer {
