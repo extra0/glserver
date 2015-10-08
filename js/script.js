@@ -195,17 +195,22 @@ $(function() {
 
 	// подствление занных в окно заказа готово сервера под шапкой
 	$('.cost__server-order-btn').click(function(){
-		$('.modal__server-name').html($(this).parents('.cost__server-type-item').find('.cost__server-type-name').html()); // записываем название сервера в шапку модального
-		$('.modal__total-price').html($(this).parents('.cost__server-type-item').find('.cost__server-current-price').html()); // записываем стоимость сервера в блок цены модального
-		$('input[name="cost"]').val($(this).parents('.cost__server-type-item').find('.cost__server-current-price').html());  // записываем стоимость сервера в input
-		$('input[name="server-name"]').val($(this).parents('.cost__server-type-item').find('.cost__server-type-name').html()); // записываем название сервера в input
+		var name = $(this).parents('.cost__server-type-item').find('.cost__server-type-name').html(),
+			cost = $(this).parents('.cost__server-type-item').find('.cost__server-current-price').html();
+		$('.modal__server-name').html(name); // записываем название сервера в шапку модального
+		$('.modal__total-price').html(cost); // записываем стоимость сервера в блок цены модального
+		$('input[name="cost"]').val(cost);  // записываем стоимость сервера в input
+		$('input[name="server-name"]').val(name); // записываем название сервера в input
 	});
 
 	// огранизация подставления данных в модальное окно при клике на "заказать" в блоке детального описания сервера
 	$('.server-description__order').click(function(){
-		console.log($(this).attr('data-index'));
-		$('.modal__server-name').html($(this).parents('.universal__block').find('.server-description__server-name').html()); // записываем название сервера в модальное окно
-		$('.modal__total-price').html($(this).parents('.server-description__table').find('.server-description__table-cost[data-index='+ $(this).attr('data-index') +']').html()); // записываем цену сервера в модальное окно
+		var name = $(this).parents('.universal__block').find('.server-description__server-name').html(),
+			cost = $(this).parents('.server-description__table').find('.server-description__table-cost[data-index='+ $(this).attr('data-index') +']').html();
+		$('.modal__server-name').html(name); // записываем название сервера в модальное окно
+		$('.modal__total-price').html(cost); // записываем цену сервера в модальное окно
+		$('input[name="cost"]').val(name);
+		$('input[name="server-name"]').val(cost);
  	});
 	
 
