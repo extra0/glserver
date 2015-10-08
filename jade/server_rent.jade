@@ -1,0 +1,298 @@
+extends _layout
+block content
+	.main__content
+		.cost__section._no-bg
+			.container-fluid
+				// окно заказа
+				.modal__window#modal_order
+					.modal__header
+						img.modal__header-logo(src="img/modal_logo.png", alt="")
+						.modal__server-name-block
+							span.modal__server-type Сервер 1С
+							p.modal__server-name Базовый
+					.modal__body
+						form.modal__form(action="#" method="post")
+							.modal__body-inner
+								label.modal__form-label ФИО:
+								input.modal__form-input(type="text" name="name" required)
+								label.modal__form-label Телефон:
+								input.modal__form-input.mask(type="phone" name="phone" required)
+								label.modal__form-label E-mail:
+								input.modal__form-input(type="email" name="email" required)
+							.modal__footer
+								.modal__total-price-block
+									p.modal__total-price 1000
+									span.modal__total-price-currency руб/мес.
+								input(type="hidden" name="server-name")
+								input(type="hidden" name="cost")
+								input.modal__submit(type="submit" value="заказать")
+				// конец окна заказа
+				.cost__server-type._marg-hover
+					.cost__server-type-item._blue-bg
+						p.cost__server-type-text сервер 1с
+						p.cost__server-type-name БАЗОВЫЙ
+						p.cost__server-type-price от 
+							| <strong class="cost__server-current-price">8700</strong><i class="rubl">a</i>
+						img.cost__server-img(src="img/server_base.png", alt="")
+						ul.cost__server-list._absolute
+							li.cost__server-list-item Аренда программ 1С (УТ, ЗУП, Бухгалтерия Предприятия)
+							li.cost__server-list-item Офисное ПО (Word, Excel, Outlook)	
+							li.cost__server-list-item Ежедневное резервное копирование данных до 500мб	
+							li.cost__server-list-item Техническая поддержка пользователей
+						.cost__order-wrap
+							a.cost__server-order-btn.fancybox(href="#modal_order") заказать
+						a.cost__server-detail-link(href="#") подробнее
+					.cost__server-type-item._gray-bg
+						p.cost__server-type-text._color-blue сервер 1с
+						p.cost__server-type-name БИЗНЕС
+						p.cost__server-type-price от 
+							| <strong class="cost__server-current-price">13300</strong><i class="rubl">a</i>
+						img.cost__server-img(src="img/server_business.png", alt="")
+						ul.cost__server-list._absolute
+							li.cost__server-list-item Аренда программ 1С (любой конфигурации)
+							li.cost__server-list-item Офисное ПО (Word, Excel ,Outlook, CRM)	
+							li.cost__server-list-item Ежедневное резервное копирование данных до 1Гб	
+							li.cost__server-list-item Техническая поддержка пользователей
+							li.cost__server-list-item Консультации по 1С - 4 часа/месяц
+						.cost__order-wrap
+							a.cost__server-order-btn.fancybox(href="#modal_order") заказать
+						a.cost__server-detail-link(href="#") подробнее
+					.cost__server-type-item._dark-blue-bg
+						p.cost__server-type-text сервер 1с
+						p.cost__server-type-name КОРПОРАТИВНЫЙ
+						p.cost__server-type-price от 
+							| <strong class="cost__server-current-price">21000</strong><i class="rubl">a</i>
+						img.cost__server-img(src="img/server_corporate.png", alt="")
+						ul.cost__server-list._absolute
+							li.cost__server-list-item Аренда программ 1С (любой конфигурации)
+							li.cost__server-list-item Офисное ПО (Word, Excel ,Outlook, CRM, дополнительные программы)
+							li.cost__server-list-item Ежедневное резервное копирование данных до 1.5Гб
+							li.cost__server-list-item Техническая поддержка пользователей
+							li.cost__server-list-item Консультации по 1С - безлимитное количество часов
+							li.cost__server-list-item Программы по защите персональных данных
+						.cost__order-wrap
+							a.cost__server-order-btn.fancybox(href="#modal_order") заказать
+						a.cost__server-detail-link(href="#") подробнее
+		.universal__block._top-bg
+			.container-fluid
+				.text-center
+					// таблица сравнения серверов
+					#compare.compare__block
+						table.compare__table
+							thead
+								tr
+									th Сервисы
+									th Базовый
+									th Бизнес
+									th Корпора-<br>тивный
+							tbody
+								tr
+									td Персональный сервер
+									td._have 
+									td._have
+									td._have
+								tr
+									td Печать документов на ближайший принтер
+									td._have
+									td._have
+									td._have
+								tr
+									td Неограниченный объем памяти на жестком диске
+									td._have 
+									td._have
+									td._have
+								tr
+									td Неограниченный интернет трафик 
+									td._have 
+									td._have
+									td._have
+								tr
+									td Офисное ПО (Word, Excel, Power Point,Outlook) 
+									td._have 
+									td._have
+									td._have
+								tr
+									td 1С бухгалтерия (любой версии)
+									td._have 
+									td._have
+									td._have
+								tr
+									td Установка дополнительного ПО (необходимого для вашей работы) 
+									td._not-have-red 
+									td._have
+									td._have
+								tr
+									td Криптографическая защита сервера
+									td._have 
+									td._have
+									td._have
+								tr
+									td Антивирусное ПО на сервере
+									td._have 
+									td._have
+									td._have
+								tr
+									td Техническая поддержка сервера
+									td._have 
+									td._have
+									td._have
+								tr
+									td Техническая поддержка в режиме "24/7"
+									td._not-have-red
+									td._not-have-red
+									td._have
+								tr
+									td Техническая поддержка 1С  (ограниченная 4 часами работы в месяц) 
+									td._not-have-ruby
+									td._have
+									td._not-have-ruby
+								tr
+									td Техническая поддержка 1С (без ограничений)
+									td._not-have-red
+									td._not-have-red
+									td._have
+								tr
+									td ПО для шифрование информации на сервере (личный пароль для доступа к жесткому диску) 
+									td._not-have-ruby
+									td._have
+									td._have
+								tr
+									td ПО для разграничения прав доступа к файлам, папкам, usb носителям, принтерам и т.д. 
+									td._not-have-red
+									td._have
+									td._have
+								tr
+									td ПО учета рабочего времени сотрудников на сервере (для контроля за работой сотрудников)
+									td._not-have-ruby
+									td._have
+									td._have
+								tr
+									td ПО для шифрования канала передачи данных (с вашего компьютера на сервер)
+									td._not-have-red
+									td._have
+									td._have
+								tr
+									td Система управления взаимоотношениями с клиентами (CRM) и система автоматизации бизнеса.
+									td._not-have-ruby
+									td._have
+									td._have
+								tr
+									td Ежедневное резервное копирование данных 
+									td._have
+									td._have
+									td._have
+								tr
+									td Хранение резервных копий на дополнительных серверах (расположенных в Европе и Москве)
+									td._not-have-ruby
+									td._have
+									td._have
+								tr
+									td Доставка всех копий на внешнем носителе
+									td._have
+									td._have
+									td._have
+								tr
+									td Личный системный администратор
+									td._not-have-ruby
+									td._have
+									td._have
+								tr
+									td Личный менеджер
+									td._have
+									td._have
+									td._have
+							tfoot
+								tr
+									td Ежемесячная абонентская плата на 5 пользователей
+									td 
+										p.compare__price 8700 руб
+										a.compare__link-order(href="#") Заказать
+									td 
+										p.compare__price 10200 руб
+										a.compare__link-order(href="#") Заказать
+									td
+										p.compare__price 11700 руб
+										a.compare__link-order(href="#") Заказать
+								tr
+									td Ежемесячная абонентская плата от 5 до 10 пользователей
+									td 
+										p.compare__price 13300 руб
+										a.compare__link-order(href="#") Заказать
+									td 
+										p.compare__price 15800 руб
+										a.compare__link-order(href="#") Заказать
+									td
+										p.compare__price 18300 руб
+										a.compare__link-order(href="#") Заказать
+								tr
+									td Ежемесячная абонентская плата больше 10 пользователей
+									td 
+										p.compare__price 21000 руб
+										a.compare__link-order(href="#") Заказать
+									td 
+										p.compare__price 26000 руб
+										a.compare__link-order(href="#") Заказать
+									td
+										p.compare__price 31000 руб
+										a.compare__link-order(href="#") Заказать
+					// конец таблица сравнения серверов
+					a(href="#compare").btn._compare._top.fancybox Сравнить тарифы
+				h2.subtitle._bold._marg-b Аренда сервера 1С: как это работает
+				.universal__video-block._pos-right
+					<iframe src="https://www.youtube.com/embed/M_XwzBMTJaM" frameborder="0" allowfullscreen=""></iframe>
+				p.universal__work-text Сервер 1С – это удаленный сервер (терминальный сервер), который представляет собой очень мощный компьютер, на котором установлено все необходимое для работы программное обеспечение (программы 1С, Word, Excel,Outlook и др.); при этом он соединен по сети с компьютерами клиентов. При работе на удаленном сервере не накладывается никаких ограничений на работу клиента, создается полная имитация привычного рабочего стола с набором стандартных программ, так необходимых для полноценной работы. Удаленный сервер берет на себя всю нагрузку в работе как компьютерной техники компании, так и всего программного обеспечения. 
+				p.universal__work-text Таким образом, удаленный сервер – это значительная экономия средств, повышение мобильности и эффективности работы компании и максимальная надежность и безопасность для всей конфиденциальной информации. О преимуществах сервера 1С, можно прочитать тут удаленный сервер 1С. Нашей отличительной особенностью является то, что мы предоставляем личный выделенный сервер, а не виртуальный,как многие компании, тем самым вы получаете защищенное и мощное решение, без ограничений на работу. (Программное обеспечение 1С предоставляет в аренду компания ООО "Корада",код партнера: 40921-45) 
+				p.universal__work-text Нашей отличительной особенностью является то, что мы предоставляем личный выделенный сервер, а не виртуальный,как многие компании, тем самым вы получаете защищенное и мощное решение, без ограничений на работу. 
+				p.universal__work-text (Программное обеспечение 1С предоставляет в аренду компания ООО "Корада",код партнера: 40921-45) 
+				.test-enter__block
+					form.test-enter__form(action="#" method="post")
+						.test-enter__form-block
+							h4.test-enter__form-title Тестовый доступ
+							label.test-enter__form-label ФИО
+							input.test-enter__form-input(type="text" required)
+							label.test-enter__form-label E-mail
+							input.test-enter__form-input(type="email" required)
+						.test-enter__submit-block
+							button.test-enter__submit(type="submit") Заказать
+				h3.title преимущества 
+				.rent-adv__block
+					ul.rent-adv__list
+						li.rent-adv__item
+							img.rent-adv__img(src="img/advantages_img1.png", alt="")
+							p.rent-adv__title._orange-color мобильно
+							p.rent-adv__text Доступ к информации на сервере в любое время и в любом месте, с любого устройства с выходом в интернет. 24/7 
+						li.rent-adv__item
+							img.rent-adv__img(src="img/advantages_img2.png", alt="")
+							p.rent-adv__title._blue-color безопасно
+							p.rent-adv__text Надежные отказоустойчевые сервера. Данные полностью защиврованы, ежедневное резервное копирование
+						li.rent-adv__item
+							img.rent-adv__img(src="img/advantages_img3.png", alt="")
+							p.rent-adv__title._green-color экономно
+							p.rent-adv__text Все лицензии предоставляются в аренду, входит в стоимость техническая поддержка самого сервера и программ 1С. 
+		.universal__block._bg-blue
+			.container-fluid
+				a.fancybox(href="#compare") таблица сравнения тарифов
+		.clients__section
+			.container-fluid
+				h3.title._color-dark-gray нам доверяют
+				.clients__slider-wrap
+					ul.clients__slider-list
+						li.clients__slider-item
+							img.clients__slider-img(src="img/content/company_list_1.png", alt="")
+						li.clients__slider-item		
+							img.clients__slider-img(src="img/content/company_list_2.png", alt="")
+						li.clients__slider-item		
+							img.clients__slider-img(src="img/content/company_list_3.png", alt="")
+						li.clients__slider-item		
+							img.clients__slider-img(src="img/content/company_list_4.png", alt="")
+						li.clients__slider-item		
+							img.clients__slider-img(src="img/content/company_list_5.png", alt="")
+						li.clients__slider-item		
+							img.clients__slider-img(src="img/content/company_list_6.png", alt="")
+						li.clients__slider-item		
+							img.clients__slider-img(src="img/content/company_list_7.png", alt="")
+						li.clients__slider-item		
+							img.clients__slider-img(src="img/content/company_list_8.png", alt="")
+						li.clients__slider-item		
+							img.clients__slider-img(src="img/content/company_list_9.png", alt="")
+				img.clients__img(src="img/man.png", alt="")

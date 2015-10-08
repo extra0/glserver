@@ -417,7 +417,7 @@ textarea {
   overflow: hidden;
   display: none;
   z-index: 8010;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(71, 91, 103, 0.63);
 }
 .fancybox-overlay-fixed {
   position: fixed;
@@ -3772,6 +3772,10 @@ Copyright (c) 2014 Daniel Eden
   clear: both;
 }
 .header__text-info-block {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
 }
@@ -4073,6 +4077,11 @@ Copyright (c) 2014 Daniel Eden
   left: -70px;
   margin-right: -60px;
 }
+.universal__video-block._pos-right {
+  float: right;
+  right: -50px;
+  margin: 0 0 15px 5px;
+}
 .universal__video-block iframe {
   position: absolute;
   top: 19px;
@@ -4128,6 +4137,10 @@ Copyright (c) 2014 Daniel Eden
   line-height: 30px;
   text-align: center;
   padding: 0 10%;
+}
+.universal__work-text {
+  font-size: 13px;
+  line-height: 20px;
 }
 .universal__upper-text {
   font-weight: bold;
@@ -4316,6 +4329,9 @@ Copyright (c) 2014 Daniel Eden
   font-weight: bold;
   color: #000;
   margin-bottom: 86px;
+}
+.subtitle._marg-b {
+  margin-bottom: 56px;
 }
 .subtitle._font-pro {
   font-family: 'PF Sans PRO Regular';
@@ -5408,6 +5424,10 @@ Copyright (c) 2014 Daniel Eden
 .btn._order:hover {
   background-position: 43px -59px;
 }
+.btn._top {
+  position: relative;
+  top: -48px;
+}
 .btn._compare {
   width: 269px;
   font-size: 24px;
@@ -5563,30 +5583,79 @@ Copyright (c) 2014 Daniel Eden
   background: #00a3e2;
   padding: 52px 0;
 }
+.cost__section._no-bg {
+  background: none;
+  padding: 0 0 52px 0;
+}
 .cost__server-type {
-  display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
-  display: -webkit-inline-flex;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   justify-content: center;
   margin: 26px 0 86px 0;
+}
+.cost__server-type._marg-hover {
+  margin: 0 0 -45px 0;
+}
+.cost__server-type._marg-hover > div:hover .cost__server-type-price,
+.cost__server-type._marg-hover > div:hover .cost__server-img {
+  opacity: 0;
+}
+.cost__server-type._marg-hover > div:hover .cost__server-list._absolute {
+  opacity: 1;
 }
 .cost__server-type-item {
   flex-basis: 33.33333%;
   border-right: 1px solid #80d1f1;
   padding: 22px 10px 0 10px;
   text-align: center;
+  position: relative;
 }
 .cost__server-type-item:last-child {
   border-right: none;
+}
+.cost__server-type-item._blue-bg {
+  background: #00a3e2;
+  padding: 95px 10px 100px 10px;
+}
+.cost__server-type-item._gray-bg {
+  background: #f5f5f5;
+  padding: 95px 10px 100px 10px;
+}
+.cost__server-type-item._gray-bg .cost__server-detail-link,
+.cost__server-type-item._gray-bg .cost__server-type-name {
+  color: #000;
+}
+.cost__server-type-item._gray-bg .cost__server-list {
+  color: #000;
+  list-style-image: url(../img/list-type-green.png);
+}
+.cost__server-type-item._gray-bg .cost__server-type-price {
+  color: #4c4c4c;
+  border: 2px solid #4c4c4c;
+}
+.cost__server-type-item._dark-blue-bg {
+  background: #0081d0;
+  padding: 95px 10px 100px 10px;
+}
+.cost__server-type-text {
+  text-transform: uppercase;
+  color: #fdc300;
+  font-size: 16px;
+  margin: 0 0 -5px 0;
+  font-weight: bold;
+}
+.cost__server-type-text._color-blue {
+  color: #0081d0;
 }
 .cost__server-type-name {
   text-transform: uppercase;
   font-size: 32px;
   color: #fff;
   font-weight: 300;
-  margin: 0 0 35px 0;
+  margin: 0 0 25px 0;
 }
 .cost__server-type-price {
   display: inline-block;
@@ -5596,11 +5665,21 @@ Copyright (c) 2014 Daniel Eden
   font-size: 22px;
   margin: 0 0 43px 0;
   padding: 8px 36px 12px 36px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .cost__server-img {
   display: block;
   margin: 0 auto 31px auto;
   max-height: 157px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .cost__server-list {
   margin: 0;
@@ -5610,6 +5689,17 @@ Copyright (c) 2014 Daniel Eden
   color: #fff;
   margin-bottom: 41px;
   min-height: 292px;
+  -webkit-transition: opacity 0.4s ease;
+  -moz-transition: opacity 0.4s ease;
+  -ms-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+.cost__server-list._absolute {
+  position: absolute;
+  top: 175px;
+  left: 0;
+  opacity: 0;
 }
 .cost__server-list-item {
   margin: 0 0 7px 0;
@@ -5794,6 +5884,10 @@ Copyright (c) 2014 Daniel Eden
 }
 /* секция с описанием на странице облако для бизнеса */
 .description__block-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
@@ -6047,6 +6141,121 @@ Copyright (c) 2014 Daniel Eden
   margin: 0;
   text-transform: uppercase;
 }
+.test-enter__block {
+  width: 100%;
+  margin: 40px 0 31px 0;
+  padding: 35px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.test-enter__form-block {
+  background: #00a3e2;
+  border-radius: 10px 0 0 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  padding: 24px 40px 33px 40px;
+  height: 266px;
+  width: 60%;
+  text-align: left;
+}
+.test-enter__form-title {
+  text-align: right;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 42px;
+  font-weight: 300;
+  position: relative;
+  margin: 0 0 2px 0;
+  display: inline-block;
+  float: right;
+}
+.test-enter__form-title:before {
+  content: '';
+  position: absolute;
+  background: url(../img/gear.png) 0 0 no-repeat;
+  width: 42px;
+  height: 49px;
+  top: 2px;
+  left: -54px;
+}
+.test-enter__form-label {
+  color: #fff;
+  font-size: 16px;
+  clear: both;
+  margin: 0 0 4px;
+  display: block;
+}
+.test-enter__form-input {
+  border: none;
+  margin-bottom: 6px;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 0 10px;
+  width: 100%;
+  height: 43px;
+  font-size: 18px;
+}
+.test-enter__submit-block {
+  border-radius: 0 10px 10px 0;
+  background: url(../img/test_form_bg.png) 0 0 no-repeat;
+  width: 264px;
+  height: 266px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -1px;
+}
+.test-enter__submit {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 37px;
+  border: none;
+  background: none;
+  margin: 3em 0;
+  -webkit-transition: opacity 0.4s ease;
+  -moz-transition: opacity 0.4s ease;
+  -ms-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+.test-enter__submit:hover {
+  opacity: 0.8;
+}
+.rent-adv__list {
+  padding: 0;
+  margin: 46px 0;
+  list-style-type: none;
+  text-align: center;
+}
+.rent-adv__item {
+  vertical-align: top;
+  width: 30%;
+  margin: 0 1.5%;
+  display: inline-block;
+}
+.rent-adv__img {
+  display: block;
+  margin: 0 auto 23px auto!important;
+}
+.rent-adv__title {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin: 0 0 13px;
+}
+.rent-adv__title._orange-color {
+  color: #fdc300;
+}
+.rent-adv__title._blue-color {
+  color: #0081d0;
+}
+.rent-adv__title._green-color {
+  color: #5bb106;
+}
+.rent-adv__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 25px;
+}
 /* футер */
 .footer {
   background: #094d72;
@@ -6174,6 +6383,9 @@ Copyright (c) 2014 Daniel Eden
   }
   .cost__server-list {
     min-height: 330px;
+  }
+  .cost__server-type._marg-hover .cost__order-wrap {
+    margin-top: 80px;
   }
 }
 @media (max-width: 1100px) {

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta description="">
+    <meta keywords="">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="/favicon.ico">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <title></title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="header__block-info">
+          <div class="container-fluid">
+            <div class="header__text-info-block">
+              <p class="header__text-info">Тел/факс: 8 (495) 648-62-80 </p>
+              <p class="header__text-info">Звонок по России бесплатный: 8 (800) 333-13-69 </p>
+              <p class="header__text-info">E-mail : info@glserver.ru </p>
+              <p class="header__text-info">г. Москва, ул. Краснобогатырская, д.2 стр.10</p>
+            </div>
+          </div>
+        </div>
+        <div class="header__menu-block">
+          <div class="container-fluid"><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a>
+            <ul class="header__menu-list">
+              <li class="header__menu-item"><a href="#" class="header__menu-link">О нас</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Услуги и стоимость</a>
+                <ul class="dropdown__menu-list">
+                  <li class="dropdown__menu-item active"><a href="#" class="dropdown__menu-link active">Облако для бизнеса</a></li>
+                  <li class="dropdown__menu-item"><a href="#" class="dropdown__menu-link">Аренда сервера 1С</a></li>
+                  <li class="dropdown__menu-item"><a href="#" class="dropdown__menu-link">Виртуальный рабочий стол</a></li>
+                  <li class="dropdown__menu-item"><a href="#" class="dropdown__menu-link">Аренда рабочего места</a></li>
+                  <li class="dropdown__menu-item"><a href="#" class="dropdown__menu-link">Готовые решения</a></li>
+                </ul>
+              </li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Клиентам</a>
+                <ul class="dropdown__menu-list">
+                  <li class="dropdown__menu-item"><a href="#" class="dropdown__menu-link active">Облако для бизнеса</a></li>
+                  <li class="dropdown__menu-item"><a href="#" class="dropdown__menu-link">Аренда сервера 1С</a></li>
+                </ul>
+              </li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">преимущества</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="main__content">
+        <div class="cost__section _no-bg">
+          <div class="container-fluid">
+            <!-- окно заказа-->
+            <div id="modal_order" class="modal__window">
+              <div class="modal__header"><img src="img/modal_logo.png" alt="" class="modal__header-logo">
+                <div class="modal__server-name-block"><span class="modal__server-type">Сервер 1С</span>
+                  <p class="modal__server-name">Базовый</p>
+                </div>
+              </div>
+              <div class="modal__body">
+                <form action="#" method="post" class="modal__form">
+                  <div class="modal__body-inner">
+                    <label class="modal__form-label">ФИО:</label>
+                    <input type="text" name="name" required class="modal__form-input">
+                    <label class="modal__form-label">Телефон:</label>
+                    <input type="phone" name="phone" required class="modal__form-input mask">
+                    <label class="modal__form-label">E-mail:</label>
+                    <input type="email" name="email" required class="modal__form-input">
+                  </div>
+                  <div class="modal__footer">
+                    <div class="modal__total-price-block">
+                      <p class="modal__total-price">1000</p><span class="modal__total-price-currency">руб/мес.</span>
+                    </div>
+                    <input type="hidden" name="server-name">
+                    <input type="hidden" name="cost">
+                    <input type="submit" value="заказать" class="modal__submit">
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- конец окна заказа-->
+            <div class="cost__server-type _marg-hover">
+              <div class="cost__server-type-item _blue-bg">
+                <p class="cost__server-type-text">сервер 1с</p>
+                <p class="cost__server-type-name">БАЗОВЫЙ</p>
+                <p class="cost__server-type-price">
+                  от 
+                  <strong class="cost__server-current-price">8700</strong><i class="rubl">a</i>
+                </p><img src="img/server_base.png" alt="" class="cost__server-img">
+                <ul class="cost__server-list _absolute">
+                  <li class="cost__server-list-item">Аренда программ 1С (УТ, ЗУП, Бухгалтерия Предприятия)</li>
+                  <li class="cost__server-list-item">Офисное ПО (Word, Excel, Outlook)	</li>
+                  <li class="cost__server-list-item">Ежедневное резервное копирование данных до 500мб	</li>
+                  <li class="cost__server-list-item">Техническая поддержка пользователей</li>
+                </ul>
+                <div class="cost__order-wrap"><a href="#modal_order" class="cost__server-order-btn fancybox">заказать</a></div><a href="#" class="cost__server-detail-link">подробнее</a>
+              </div>
+              <div class="cost__server-type-item _gray-bg">
+                <p class="cost__server-type-text _color-blue">сервер 1с</p>
+                <p class="cost__server-type-name">БИЗНЕС</p>
+                <p class="cost__server-type-price">
+                  от 
+                  <strong class="cost__server-current-price">13300</strong><i class="rubl">a</i>
+                </p><img src="img/server_business.png" alt="" class="cost__server-img">
+                <ul class="cost__server-list _absolute">
+                  <li class="cost__server-list-item">Аренда программ 1С (любой конфигурации)</li>
+                  <li class="cost__server-list-item">Офисное ПО (Word, Excel ,Outlook, CRM)	</li>
+                  <li class="cost__server-list-item">Ежедневное резервное копирование данных до 1Гб	</li>
+                  <li class="cost__server-list-item">Техническая поддержка пользователей</li>
+                  <li class="cost__server-list-item">Консультации по 1С - 4 часа/месяц</li>
+                </ul>
+                <div class="cost__order-wrap"><a href="#modal_order" class="cost__server-order-btn fancybox">заказать</a></div><a href="#" class="cost__server-detail-link">подробнее</a>
+              </div>
+              <div class="cost__server-type-item _dark-blue-bg">
+                <p class="cost__server-type-text">сервер 1с</p>
+                <p class="cost__server-type-name">КОРПОРАТИВНЫЙ</p>
+                <p class="cost__server-type-price">
+                  от 
+                  <strong class="cost__server-current-price">21000</strong><i class="rubl">a</i>
+                </p><img src="img/server_corporate.png" alt="" class="cost__server-img">
+                <ul class="cost__server-list _absolute">
+                  <li class="cost__server-list-item">Аренда программ 1С (любой конфигурации)</li>
+                  <li class="cost__server-list-item">Офисное ПО (Word, Excel ,Outlook, CRM, дополнительные программы)</li>
+                  <li class="cost__server-list-item">Ежедневное резервное копирование данных до 1.5Гб</li>
+                  <li class="cost__server-list-item">Техническая поддержка пользователей</li>
+                  <li class="cost__server-list-item">Консультации по 1С - безлимитное количество часов</li>
+                  <li class="cost__server-list-item">Программы по защите персональных данных</li>
+                </ul>
+                <div class="cost__order-wrap"><a href="#modal_order" class="cost__server-order-btn fancybox">заказать</a></div><a href="#" class="cost__server-detail-link">подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="universal__block _top-bg">
+          <div class="container-fluid">
+            <div class="text-center">
+              <!-- таблица сравнения серверов-->
+              <div id="compare" class="compare__block">
+                <table class="compare__table">
+                  <thead>
+                    <tr>
+                      <th>Сервисы</th>
+                      <th>Базовый</th>
+                      <th>Бизнес</th>
+                      <th>Корпора-<br>тивный</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Персональный сервер</td>
+                      <td class="_have"> </td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>Печать документов на ближайший принтер</td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>Неограниченный объем памяти на жестком диске</td>
+                      <td class="_have"> </td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>Неограниченный интернет трафик </td>
+                      <td class="_have"> </td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>Офисное ПО (Word, Excel, Power Point,Outlook) </td>
+                      <td class="_have"> </td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>1С бухгалтерия (любой версии)</td>
+                      <td class="_have"> </td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>Установка дополнительного ПО (необходимого для вашей работы) </td>
+                      <td class="_not-have-red"> </td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>Криптографическая защита сервера</td>
+                      <td class="_have"> </td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>Антивирусное ПО на сервере</td>
+                      <td class="_have"> </td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>Техническая поддержка сервера</td>
+                      <td class="_have"> </td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>Техническая поддержка в режиме "24/7"</td>
+                      <td class="_not-have-red"></td>
+                      <td class="_not-have-red"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>Техническая поддержка 1С  (ограниченная 4 часами работы в месяц) </td>
+                      <td class="_not-have-ruby"></td>
+                      <td class="_have"></td>
+                      <td class="_not-have-ruby"></td>
+                    </tr>
+                    <tr>
+                      <td>Техническая поддержка 1С (без ограничений)</td>
+                      <td class="_not-have-red"></td>
+                      <td class="_not-have-red"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>ПО для шифрование информации на сервере (личный пароль для доступа к жесткому диску) </td>
+                      <td class="_not-have-ruby"></td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>ПО для разграничения прав доступа к файлам, папкам, usb носителям, принтерам и т.д. </td>
+                      <td class="_not-have-red"></td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>ПО учета рабочего времени сотрудников на сервере (для контроля за работой сотрудников)</td>
+                      <td class="_not-have-ruby"></td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>ПО для шифрования канала передачи данных (с вашего компьютера на сервер)</td>
+                      <td class="_not-have-red"></td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>Система управления взаимоотношениями с клиентами (CRM) и система автоматизации бизнеса.</td>
+                      <td class="_not-have-ruby"></td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>Ежедневное резервное копирование данных </td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>Хранение резервных копий на дополнительных серверах (расположенных в Европе и Москве)</td>
+                      <td class="_not-have-ruby"></td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>Доставка всех копий на внешнем носителе</td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>Личный системный администратор</td>
+                      <td class="_not-have-ruby"></td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                    <tr>
+                      <td>Личный менеджер</td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                      <td class="_have"></td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td>Ежемесячная абонентская плата на 5 пользователей</td>
+                      <td> 
+                        <p class="compare__price">8700 руб</p><a href="#" class="compare__link-order">Заказать</a>
+                      </td>
+                      <td> 
+                        <p class="compare__price">10200 руб</p><a href="#" class="compare__link-order">Заказать</a>
+                      </td>
+                      <td>
+                        <p class="compare__price">11700 руб</p><a href="#" class="compare__link-order">Заказать</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Ежемесячная абонентская плата от 5 до 10 пользователей</td>
+                      <td> 
+                        <p class="compare__price">13300 руб</p><a href="#" class="compare__link-order">Заказать</a>
+                      </td>
+                      <td> 
+                        <p class="compare__price">15800 руб</p><a href="#" class="compare__link-order">Заказать</a>
+                      </td>
+                      <td>
+                        <p class="compare__price">18300 руб</p><a href="#" class="compare__link-order">Заказать</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Ежемесячная абонентская плата больше 10 пользователей</td>
+                      <td> 
+                        <p class="compare__price">21000 руб</p><a href="#" class="compare__link-order">Заказать</a>
+                      </td>
+                      <td> 
+                        <p class="compare__price">26000 руб</p><a href="#" class="compare__link-order">Заказать</a>
+                      </td>
+                      <td>
+                        <p class="compare__price">31000 руб</p><a href="#" class="compare__link-order">Заказать</a>
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- конец таблица сравнения серверов--><a href="#compare" class="btn _compare _top fancybox">Сравнить тарифы</a>
+            </div>
+            <h2 class="subtitle _bold _marg-b">Аренда сервера 1С: как это работает</h2>
+            <div class="universal__video-block _pos-right"><iframe src="https://www.youtube.com/embed/M_XwzBMTJaM" frameborder="0" allowfullscreen=""></iframe></div>
+            <p class="universal__work-text">Сервер 1С – это удаленный сервер (терминальный сервер), который представляет собой очень мощный компьютер, на котором установлено все необходимое для работы программное обеспечение (программы 1С, Word, Excel,Outlook и др.); при этом он соединен по сети с компьютерами клиентов. При работе на удаленном сервере не накладывается никаких ограничений на работу клиента, создается полная имитация привычного рабочего стола с набором стандартных программ, так необходимых для полноценной работы. Удаленный сервер берет на себя всю нагрузку в работе как компьютерной техники компании, так и всего программного обеспечения. </p>
+            <p class="universal__work-text">Таким образом, удаленный сервер – это значительная экономия средств, повышение мобильности и эффективности работы компании и максимальная надежность и безопасность для всей конфиденциальной информации. О преимуществах сервера 1С, можно прочитать тут удаленный сервер 1С. Нашей отличительной особенностью является то, что мы предоставляем личный выделенный сервер, а не виртуальный,как многие компании, тем самым вы получаете защищенное и мощное решение, без ограничений на работу. (Программное обеспечение 1С предоставляет в аренду компания ООО "Корада",код партнера: 40921-45) </p>
+            <p class="universal__work-text">Нашей отличительной особенностью является то, что мы предоставляем личный выделенный сервер, а не виртуальный,как многие компании, тем самым вы получаете защищенное и мощное решение, без ограничений на работу. </p>
+            <p class="universal__work-text">(Программное обеспечение 1С предоставляет в аренду компания ООО "Корада",код партнера: 40921-45) </p>
+            <div class="test-enter__block">
+              <form action="#" method="post" class="test-enter__form">
+                <div class="test-enter__form-block">
+                  <h4 class="test-enter__form-title">Тестовый доступ</h4>
+                  <label class="test-enter__form-label">ФИО</label>
+                  <input type="text" required class="test-enter__form-input">
+                  <label class="test-enter__form-label">E-mail</label>
+                  <input type="email" required class="test-enter__form-input">
+                </div>
+                <div class="test-enter__submit-block">
+                  <button type="submit" class="test-enter__submit">Заказать</button>
+                </div>
+              </form>
+            </div>
+            <h3 class="title">преимущества </h3>
+            <div class="rent-adv__block">
+              <ul class="rent-adv__list">
+                <li class="rent-adv__item"><img src="img/advantages_img1.png" alt="" class="rent-adv__img">
+                  <p class="rent-adv__title _orange-color">мобильно</p>
+                  <p class="rent-adv__text">Доступ к информации на сервере в любое время и в любом месте, с любого устройства с выходом в интернет. 24/7 </p>
+                </li>
+                <li class="rent-adv__item"><img src="img/advantages_img2.png" alt="" class="rent-adv__img">
+                  <p class="rent-adv__title _blue-color">безопасно</p>
+                  <p class="rent-adv__text">Надежные отказоустойчевые сервера. Данные полностью защиврованы, ежедневное резервное копирование</p>
+                </li>
+                <li class="rent-adv__item"><img src="img/advantages_img3.png" alt="" class="rent-adv__img">
+                  <p class="rent-adv__title _green-color">экономно</p>
+                  <p class="rent-adv__text">Все лицензии предоставляются в аренду, входит в стоимость техническая поддержка самого сервера и программ 1С. </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="universal__block _bg-blue">
+          <div class="container-fluid"><a href="#compare" class="fancybox">таблица сравнения тарифов</a></div>
+        </div>
+        <div class="clients__section">
+          <div class="container-fluid">
+            <h3 class="title _color-dark-gray">нам доверяют</h3>
+            <div class="clients__slider-wrap">
+              <ul class="clients__slider-list">
+                <li class="clients__slider-item"><img src="img/content/company_list_1.png" alt="" class="clients__slider-img"></li>
+                <li class="clients__slider-item">		<img src="img/content/company_list_2.png" alt="" class="clients__slider-img"></li>
+                <li class="clients__slider-item">		<img src="img/content/company_list_3.png" alt="" class="clients__slider-img"></li>
+                <li class="clients__slider-item">		<img src="img/content/company_list_4.png" alt="" class="clients__slider-img"></li>
+                <li class="clients__slider-item">		<img src="img/content/company_list_5.png" alt="" class="clients__slider-img"></li>
+                <li class="clients__slider-item">		<img src="img/content/company_list_6.png" alt="" class="clients__slider-img"></li>
+                <li class="clients__slider-item">		<img src="img/content/company_list_7.png" alt="" class="clients__slider-img"></li>
+                <li class="clients__slider-item">		<img src="img/content/company_list_8.png" alt="" class="clients__slider-img"></li>
+                <li class="clients__slider-item">		<img src="img/content/company_list_9.png" alt="" class="clients__slider-img"></li>
+              </ul>
+            </div><img src="img/man.png" alt="" class="clients__img">
+          </div>
+        </div>
+      </div>
+      <div class="buffer"></div>
+    </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="footer__app-block">
+          <p class="footer__info-text">Скачать софт для<br>iPhone и Android:</p><a href="#" class="footer__app-link _ios"></a><a href="#" class="footer__app-link _android"></a>
+        </div><a href="/" class="footer__logo"><img src="img/footer__logo.png" alt=""></a>
+        <div class="footer__info-block">
+          <p class="footer__info-text"><strong>Адрес:</strong> 107564, Россия, г. Москва, ул. Краснобогатырская, д.2 стр.10,</p>
+          <p class="footer__info-text"><strong>Время работы офиса:</strong> с 10.00 до 18.00 </p>
+          <p class="footer__info-text"><strong>Тел./факс в Москве:</strong> 8 (495) 648-62-80 </p>
+          <p class="footer__info-text"><strong>Звонок по России бесплатный:</strong> 8 (800) 333-13-69 </p>
+          <p class="footer__info-text"><strong>E-mail:</strong> info@glserver.ru</p>
+        </div>
+        <div class="footer__link-block"><a href="#" class="footer__link _useful">Полезное </a><a href="#" class="footer__link _sitemap">Карта сайта </a><a href="#" class="footer__link _check">Проверить скорость</a></div>
+      </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -105,10 +105,12 @@ $(function() {
 		max: 5.0,
 		slide: function(event, ui) {
 			$("#cpu_amount").val("2 x "+ ui.value);
-			$('#cpu_modal').html($("#cpu_amount").val());
+			$('#cpu_modal').html($("#cpu_amount").val()); // записываем значение в модальное окно
+			$('input[name="cpu-val"]').val($("#cpu_amount").val()); // записываем значенеи в скрытый инпут
 		}
 	});
 	$( "#cpu_amount" ).val( "2 x " + $( "#calculate__cpu-range" ).slider( "value" ));
+	$('input[name="cpu-val"]').val($("#cpu_amount").val());
 
 	// слайдер ram
 	$('#calculate__ram-range').slider({
@@ -119,10 +121,12 @@ $(function() {
 		max: 32,
 		slide: function(event, ui) {
 			$("#ram_amount").val(ui.value);
-			$('#ram_modal').html($("#ram_amount").val());
+			$('#ram_modal').html($("#ram_amount").val()); // записываем значение в модальное окно
+			$('input[name="ram-val"]').val($('#ram_amount').val()); // записываем значенеи в скрытый инпут
 		}
 	});
 	$("#ram_amount").val($( "#calculate__ram-range" ).slider( "value" ));
+	$('input[name="ram-val"]').val($('#ram_amount').val());
 
 	// слайдер hdd
 	$('#calculate__hdd-range').slider({
@@ -133,10 +137,12 @@ $(function() {
 		max: 5000,
 		slide: function(event, ui) {
 			$("#hdd_amount").val(ui.value);
-			$('#hdd_modal').html($("#hdd_amount").val());
+			$('#hdd_modal').html($("#hdd_amount").val()); // записываем значение в модальное окно
+			$('input[name="hdd-val"]').val($('#hdd_amount').val()); // записываем значенеи в скрытый инпут
 		}
 	});
 	$("#hdd_amount").val($( "#calculate__hdd-range" ).slider( "value" ));
+	$('input[name="hdd-val"]').val($('#hdd_amount').val());
 
 	// слайдер ip
 	$('#calculate__ip-range').slider({
@@ -147,24 +153,41 @@ $(function() {
 		max: 20,
 		slide: function(event, ui) {
 			$("#ip_amount").val(ui.value);
-			$('#ip_modal').html($("#ip_amount").val());
+			$('#ip_modal').html($("#ip_amount").val()); // записываем значение в модальное окно
+			$('input[name="ip-val"]').val($('#ip_amount').val()); // записываем значенеи в скрытый инпут
 		}
 	});
 	$("#ip_amount").val($( "#calculate__ip-range" ).slider( "value" ));
+	$('input[name="ip-val"]').val($('#ip_amount').val());
 
 	// отмечаем пункты чекбоксов услуг в калькуляторе и заносим их в модальное
+	$('input[name="ssd-val"]').val('Нет');
+	$('input[name="ddos-val"]').val('Нет');
+	
 	$('.calculate__checkbox').click(function(){
 		if ($('#ssd').is(':checked')) {
 			$('#ssd_modal').addClass('active');
+			$('input[name="ssd-val"]').val('Да');
 		} else {
 			$('#ssd_modal').removeClass('active');
+			$('input[name="ssd-val"]').val('Нет');
 		}
 
 		if ($('#ddos').is(':checked')) {
 			$('#ddos_modal').addClass('active');
+			$('input[name="ddos-val"]').val('Да');
 		} else {
 			$('#ddos_modal').removeClass('active');
+			$('input[name="ddos-val"]').val('Нет');
 		}
+	});
+
+	// окно заказа готово сервера
+	$('.cost__server-order-btn').click(function(){
+		$('.modal__server-name').html($(this).parents('.cost__server-type-item').find('.cost__server-type-name').html()); // записываем название сервера в шапку модального
+		$('.modal__total-price').html($(this).parents('.cost__server-type-item').find('.cost__server-current-price').html()); // записываем стоимость сервера в блок цены модального
+		$('input[name="cost"]').val($(this).parents('.cost__server-type-item').find('.cost__server-current-price').html());  // записываем стоимость сервера в input
+		$('input[name="server-name"]').val($(this).parents('.cost__server-type-item').find('.cost__server-type-name').html()); // записываем название сервера в input
 	});
 	
 

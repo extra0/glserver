@@ -11,14 +11,11 @@ block content
 				.main__block-inner
 					h1.title._color-white._font-normal Облако для бизнеса
 					.calculate__section
-						// окно заказа
+						// окно заказа с калькулятора
 						.modal__window#modal_order
 							.modal__header
 								img.modal__header-logo(src="img/modal_logo.png", alt="")
-								//- p.modal__subtitle Облако<br>для бизнеса
-								.modal__server-name-block
-									span.modal__server-type Сервер 1С
-									p.modal__server-name Базовый
+								p.modal__subtitle Облако<br>для бизнеса
 							.modal__body
 								form.modal__form(action="#" method="post")
 									.modal__body-inner
@@ -54,6 +51,13 @@ block content
 										.modal__total-price-block
 											p.modal__total-price 1000
 											span.modal__total-price-currency руб/мес.
+										input(type="hidden" name="cpu-val")
+										input(type="hidden" name="ram-val")
+										input(type="hidden" name="hdd-val")
+										input(type="hidden" name="ip-val")
+										input(type="hidden" name="ssd-val")
+										input(type="hidden" name="ddos-val")
+										input(type="hidden" name="cost-val")
 										input.modal__submit(type="submit" value="заказать")
 						// конец окна заказа
 						.calculate__sidebar

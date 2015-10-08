@@ -172,6 +172,11 @@
 	    	left: -70px;
 	    	margin-right: -60px;
 	    }
+	    &._pos-right {
+	    	float: right;
+	    	right: -50px;
+	    	margin: 0 0 15px 5px;
+	    }
 		iframe {
 			position: absolute;
 			top: 19px;
@@ -228,6 +233,10 @@
 	    line-height: 30px;
 	    text-align: center;
 	    padding: 0 10%;
+	}
+	&__work-text {
+		font-size: 13px;
+		line-height: 20px;
 	}
 	&__upper-text {
 		font-weight: bold;
@@ -418,6 +427,9 @@
 		font-weight: bold;
 		color: #000;
 		margin-bottom: 86px;
+	}
+	&._marg-b {
+		margin-bottom: 56px;
 	}
 	&._font-pro {
 		font-family: 'PF Sans PRO Regular';
@@ -1562,6 +1574,10 @@
 		    background-position: 43px -59px;
 		}
 	}
+	&._top {
+		position: relative;
+		top: -48px;
+	}
 	&._compare {
 		width: 269px;
 		font-size: 24px;
@@ -1722,23 +1738,74 @@
 	&__section {
 		background: @blue;
 		padding: 52px 0;
+		&._no-bg {
+			background: none;
+			padding: 0 0 52px 0;
+		}
 	}
 	&__server-type {
-		display: -webkit-inline-box; 
-		display: -moz-inline-box;   
-		display: -ms-inline-flexbox; 
-		display: -webkit-inline-flex;
-		display: inline-flex;
+		display: -webkit-box; 
+		display: -moz-box;   
+		display: -ms-flexbox; 
+		display: -webkit-flex;
+		display: flex;
 		justify-content: center;
 		margin: 26px 0 86px 0;
+		&._marg-hover {
+			margin: 0 0 -45px 0;
+			& > div:hover {
+				.cost__server-type-price,
+				.cost__server-img {
+					opacity: 0;
+				}
+				.cost__server-list._absolute {
+					opacity: 1;
+				}
+			}
+		}
 	}
 	&__server-type-item {
 		flex-basis: 33.33333%;
 		border-right: 1px solid #80d1f1;
 		padding: 22px 10px 0 10px;
 		text-align: center;
+		position: relative;
 		&:last-child {
 			border-right: none;
+		}
+		&._blue-bg {
+			background: @blue;
+			padding: 95px 10px 100px 10px;
+		}
+		&._gray-bg {
+			background: #f5f5f5;
+			padding: 95px 10px 100px 10px;
+			.cost__server-detail-link,
+			.cost__server-type-name {
+				color: #000;
+			}
+			.cost__server-list {
+				color: #000;
+				list-style-image: url(../img/list-type-green.png);
+			}
+			.cost__server-type-price {
+				color: #4c4c4c;
+				border: 2px solid #4c4c4c;
+			}
+		}
+		&._dark-blue-bg {
+			background: @dark-blue;
+			padding: 95px 10px 100px 10px;
+		}
+	}
+	&__server-type-text {
+		text-transform: uppercase;
+		color: #fdc300;
+		font-size: 16px;
+		margin: 0 0 -5px 0;
+		font-weight: bold;
+		&._color-blue {
+			color: @dark-blue;
 		}
 	}
 	&__server-type-name {
@@ -1746,7 +1813,7 @@
 		font-size: 32px;
 		color: #fff;
 		font-weight: 300;
-		margin: 0 0 35px 0;
+		margin: 0 0 25px 0;
 	}
 	&__server-type-price {
 		display: inline-block;
@@ -1756,11 +1823,21 @@
 		font-size: 22px;
 		margin: 0 0 43px 0;
 		padding: 8px 36px 12px 36px;
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
 	}
 	&__server-img {
 		display: block;
 		margin: 0 auto 31px auto;
-		max-height: 157px
+		max-height: 157px;
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
 	}
 	&__server-list {
 		margin: 0;
@@ -1770,6 +1847,17 @@
 		color: #fff;
 		margin-bottom: 41px;
 		min-height: 292px;
+		-webkit-transition: opacity 0.4s ease;
+		-moz-transition: opacity 0.4s ease;
+		-ms-transition: opacity 0.4s ease;
+		-o-transition: opacity 0.4s ease;
+		transition: opacity 0.4s ease;
+		&._absolute {
+			position: absolute;
+			top: 175px;
+			left: 0;
+			opacity: 0;
+		}
 	}
 	&__server-list-item {
 		margin: 0 0 7px 0;
@@ -1960,6 +2048,10 @@
 /* секция с описанием на странице облако для бизнеса */
 .description {
 	&__block-wrapper {
+		display: -webkit-box; 
+		display: -moz-box;   
+		display: -ms-flexbox; 
+		display: -webkit-flex;
 		display: flex;
 		flex-wrap: wrap;
 		align-content: space-around;
@@ -2239,5 +2331,121 @@
 		color: #fff;
 		margin: 0;
 		text-transform: uppercase;
+	}
+}
+// блок тестового доступа
+.test-enter {
+	&__block {
+		width: 100%;
+		margin: 40px 0 31px 0;
+		padding: 35px;
+		box-sizing: border-box;
+		text-align: center;
+	}
+	&__form-block {
+		background: @blue;
+		border-radius: 10px 0 0 10px;
+		box-sizing: border-box;
+		display: inline-block;
+		vertical-align: top;
+		padding: 24px 40px 33px 40px;
+		height: 266px;
+		width: 60%;
+		text-align: left;
+	}
+	&__form-title {
+		text-align: right;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 42px;
+		font-weight: 300;
+		position: relative;
+		margin: 0 0 2px 0;
+		display: inline-block;
+		float: right;
+		&:before {
+			content: '';
+			position: absolute;
+			background: url(../img/gear.png) 0 0 no-repeat;
+			width: 42px;
+			height: 49px;
+			top: 2px;
+			left: -54px;
+		}
+	}
+	&__form-label {
+		color: #fff;
+		font-size: 16px;
+		clear: both;
+		margin: 0 0 4px;
+		display: block;
+	}
+	&__form-input {
+		border: none;
+		margin-bottom: 6px;
+		background: #fff;
+		box-sizing: border-box;
+		padding: 0 10px;
+		width: 100%;
+		height: 43px;
+		font-size: 18px;
+	}
+	&__submit-block {
+		border-radius: 0 10px 10px 0;
+		background: url(../img/test_form_bg.png) 0 0 no-repeat;
+		width: 264px;
+		height: 266px;
+		display: inline-block;
+		vertical-align: top;
+		margin-left: -1px;
+	}
+	&__submit {
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 37px;
+		border: none;
+		background: none;
+		margin: 3em 0;
+		-webkit-transition: opacity 0.4s ease;
+		-moz-transition: opacity 0.4s ease;
+		-ms-transition: opacity 0.4s ease;
+		-o-transition: opacity 0.4s ease;
+		transition: opacity 0.4s ease;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+// блок приемуществ на странице аренды сервера
+.rent-adv {
+	&__block {}
+	&__list {
+		padding: 0;
+		margin: 46px 0;
+		list-style-type: none;
+		text-align: center;
+	}
+	&__item {
+		vertical-align: top;
+		width: 30%;
+		margin: 0 1.5%;
+		display: inline-block;
+	}
+	&__img {
+		display: block;
+		margin: 0 auto 23px auto!important;
+	}
+	&__title {
+		text-transform: uppercase;
+		font-size: 30px;
+		margin: 0 0 13px;
+		&._orange-color {color: #fdc300;}
+		&._blue-color {color: @dark-blue;}
+		&._green-color {color: #5bb106;}
+	}
+	&__text {
+		margin: 0;
+		font-size: 16px;
+		line-height: 25px;
 	}
 }

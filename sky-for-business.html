@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=1200">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta description="">
     <meta keywords="">
@@ -55,12 +55,10 @@
             <div class="main__block-inner">
               <h1 class="title _color-white _font-normal">Облако для бизнеса</h1>
               <div class="calculate__section">
-                <!-- окно заказа-->
+                <!-- окно заказа с калькулятора-->
                 <div id="modal_order" class="modal__window">
                   <div class="modal__header"><img src="img/modal_logo.png" alt="" class="modal__header-logo">
-                    <div class="modal__server-name-block"><span class="modal__server-type">Сервер 1С</span>
-                      <p class="modal__server-name">Базовый</p>
-                    </div>
+                    <p class="modal__subtitle">Облако<br>для бизнеса</p>
                   </div>
                   <div class="modal__body">
                     <form action="#" method="post" class="modal__form">
@@ -94,6 +92,13 @@
                         <div class="modal__total-price-block">
                           <p class="modal__total-price">1000</p><span class="modal__total-price-currency">руб/мес.</span>
                         </div>
+                        <input type="hidden" name="cpu-val">
+                        <input type="hidden" name="ram-val">
+                        <input type="hidden" name="hdd-val">
+                        <input type="hidden" name="ip-val">
+                        <input type="hidden" name="ssd-val">
+                        <input type="hidden" name="ddos-val">
+                        <input type="hidden" name="cost-val">
                         <input type="submit" value="заказать" class="modal__submit">
                       </div>
                     </form>
